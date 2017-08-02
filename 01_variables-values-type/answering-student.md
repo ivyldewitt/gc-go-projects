@@ -2,7 +2,7 @@
 
 **Summary:**
 
-Q: I have the following program [here](https://play.golang.org/p/Cerg8gIEz4) which is returning a special character instead of the string version of the number here. Why is that?
+Q: I have the following program [here](https://play.golang.org/p/Cerg8gIEz4) which is returning a special character instead of the string version of the number here on line 23. Why is that?
 
 A:
 For starters, I included my solution here: https://play.golang.org/p/o2rYsEZ8S7.
@@ -118,3 +118,5 @@ func main() {
 //892
 // string
 ```
+
+In summary, the error above occurs because of how the strings() function works - it returns the Unicode character for a number, not the number itself. We should use the strconv package instead. Additionally, we should alias a primitive type such as string, int, etc. Structs, yes. Primitive types, typically no.

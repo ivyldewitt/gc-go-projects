@@ -64,7 +64,7 @@ Go also prevents/asks us to not use polluted code. We can use "_" to throwaway t
 
 Key Takeaway: Every program in go starts in  ```package main``` and it uses ```func main()``` as the entry point to your program. It's also the exit point of the program. Any function that is exportable from the program is capitalized.
 
-Short Declaration Operator
+### Short Declaration Operator
 ------------------------------------------------------------------
 
 The short declaration operation is used to assign values in Go.
@@ -94,7 +94,7 @@ func main() {
 
 We need to reassign variables with =, not declare them with := after we've first declared/created them. 
 
-The Var Keyword
+### The Var Keyword
 ------------------------------------------------------------------
 
 Let's say we want to have a variable that's accessible within a wider scope. Scope is the area where a variable lives, exists, and can be accessed. In the following program:
@@ -125,7 +125,7 @@ We can create scope which is larger than a code block to create a scope a the pa
 
 Still, best practice is to keep scope as *narrow* as possible. Use short declaration operator to declare code within your code blocks.
 
-Exploring Types in Go
+### Exploring Types in Go
 ------------------------------------------------------------------
 
 >"Type is life" - Bill Kennedy
@@ -176,3 +176,232 @@ In CompSci, a compositive data type allows us to compose/aggregate other values 
 Note: I think structs could be an example of this? Along with arrays and lists. 
 
 The act of constructing a composite data type is the art of composition. 
+
+### Zero Value
+------------------------------------------------------------------
+
+Understanding initialization and the zero value in Golang. Some review about declaring/assiging.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+var q int 
+//Declaring a variable of type int
+
+func main() {
+    q = 53 //Assiging or initialize a value to that variable
+    fmt.Println(q)
+}
+
+```
+
+We can only assign the type we declared to the variable. Ex: ```q = "Toby"``` would not work.
+
+Initialization: In programming, this is the assignment of an initial value for a data object or variable. *Aka the first time you assign a value to a variable.*
+
+Things in a computer are stored in memory. In a computer we have memory (like a post office with P.O. boxes). We havea all of these values stored in different P.O. boxes. 
+
+Every type in Go has a zero value. If we haven't assigned an initial value, the compiler sets it to the zero value which is:
+
+* False for bool
+* 0 for ints
+* 0.0 for integers
+* "" for strings
+* nil for points/funcs/interfaces, slices, channels, and maps.
+
+We should typically use var for package scope, and zero declarations. As a general rule, the short declaration operator should be our first choice.
+
+
+### The fmt Package
+------------------------------------------------------------------
+
+Looking more into how we read the standard library documentation with the fmt pacakge.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+var b string = "Beyonce Knowles"
+var c bool
+var z bool = true
+
+func main() {
+    a := 23
+    jm := "Electric Lady"
+    v := `My favorite Solange song is "Losing You".`
+    fmt.Println(s)
+    fmt.Println(b)
+    fmt.Println(c)
+    fmt.Println(z)
+    fmt.Println(e)
+    fmt.Println(jm)
+    fmt.Println(b, "says: ", v)
+    fmt.Println(v)
+
+    fmt.Printf("%v\n", a)
+    fmt.Printf("%T\n", a)
+    fmt.Printf("%T\n", jm)
+    fmt.Printf("%T\t%T", b, z)
+
+    s := fmt.Sprint(a, jm)
+}
+
+```
+
+[Playground Link](https://play.golang.org/p/vQ_vAvAEwW)
+
+The above code shows a quick review of raw string literals ``, different variable types and assignments. 
+
+Checking the [Godoc Fmt Index](http://godoc.org/fmt#pkg-index) for list of main functions and variables. To format strings, we'll use:
+
+func Printf
+```go
+func Printf(format string, a ...interface{}) (n int, err error)
+```
+It takes a format of type strings, and a unlimited number of values. The format verbs are as follows:
+
+```
+%v	the value in a default format
+	when printing structs, the plus flag (%+v) adds field names
+%#v	a Go-syntax representation of the value
+%T	a Go-syntax representation of the type of the value
+%%	a literal percent sign; consumes no value
+```
+
+Fun fact: These are derived from C, but simpler. 
+
+Escaped Characters: See the [rune literals](https://golang.org/ref/spec#Rune_literals) section in the Go Language Spec for reference on common escaped characters like \n or \t.
+
+With format printing we add the format printing string first, and then add the variable to tell the complier what we're trying to format.
+
+**Sprint Family**
+
+Sprint is to string print. We can use this to print directly to a string.
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+var b string = "Beyonce Knowles"
+var c bool
+var z bool = true
+
+func main() {
+	a := 23
+	jm := "Electric Lady"
+	v := `My favorite Solange song is "Losing You".`
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(z)
+	fmt.Println(jm)
+	fmt.Println(b, "says: ", v)
+	fmt.Println(v)
+
+	fmt.Printf("%v\n", a)
+	fmt.Printf("%T\n", a)
+	fmt.Printf("%T\n", jm)
+	fmt.Printf("%T\t%T", b, z)
+
+	s := fmt.Sprint(a, jm)
+	fmt.Println(s)
+	sk := fmt.Sprintf("%T\t%T", b, z)
+	fmt.Println(sk)
+}
+```
+>"Sprint formats using the default formats for its operands and returns the resulting string. Spaces are added between operands when neither is a string."
+
+**Fprintln Family**
+
+Allows us to print to the web ala io.Writer. 
+
+Fprint formats using the default formats for its operands and writes to w. Spaces are added between operands when neither is a string. It returns the number of bytes written and any write error encountered.
+
+
+### Creating Your Own Type
+------------------------------------------------------------------
+
+>"Go is all about type"
+
+Since Go is a static programming language, i.e. once you declare a variable is of a certain type, it doesn't change.
+
+```go
+
+package main
+
+import (
+	"fmt"
+)
+
+var a int
+
+type solange int
+
+var b solange
+
+func main() {
+	a = 23
+	b = 545
+	fmt.Println(a)
+	fmt.Printf("%T\n", a)
+	fmt.Println(b)
+    // a = b - wont' work!
+	fmt.Printf("%T\n", b)
+}
+
+//Output
+// 23
+// int
+// 545
+// main.solange
+```
+
+[Go Playground Link](https://play.golang.org/p/FuwEUkKTt9)
+
+
+### Conversion, Not Casting
+------------------------------------------------------------------
+
+We have a specific way to talk about Go - we *convert* values, not *cast* them. We can convert a value from a *declared type to its underlying type*, or convert a primitive type to another.
+
+```go
+
+package main
+
+import (
+	"fmt"
+)
+
+var a int
+
+type solange int
+
+var b solange
+
+func main() {
+	a = 23
+	b = 545
+	fmt.Println(a)
+	fmt.Printf("%T\n", a)
+	fmt.Println(b)
+    a = int(b)
+	fmt.Printf("%T\n", b)
+}
+
+//Output
+// 23
+// int
+// 545
+// main.solange
+```
