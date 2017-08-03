@@ -56,5 +56,23 @@ Yesterday I spent most of my time reviewing/learning about the basics of variabl
 Mostly more review - now onto the exercises!
 
 
+**D 3: Wednesday, August 3rd, 2017**
 
+**What did I learn today?**:
+
+Shorter day today - mostly just me starting to enjoy my vacation. =)
+
+* I completed the section 3 exercises of the 'learn how to code' course - focusing on zero values and type declarations
+* I also learned the basics of using 'bool' - and how it's used to express true/false values
+* The comparison operators, and how they can also be used to express true/false values
+
+**How does this build on from yesterday?**:
+Yesterday I learned about the zero value, type, the fmt package family (print, sprint, and fprint), and type declarations/creating types.
+
+
+**Key Takeways & Points to Review**:
+* Type: Bool - A way to evaluate true/false statements
+
+**Any Reflections?**:
+Completed exercises, now onto more lessons.
 

@@ -2,6 +2,7 @@
 *****************************************************
 
 ### Playground
+------------------------------------------------------------------
 
 - Go Playground: A way to play around with Go w/o sending it to anyone, and a way to send it to each other without hassle. Useful for having others debug and share/send answers!
 - Packages: In Go, code is organized into packages, which we *import* into the program. We import using the following syntax:
