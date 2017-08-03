@@ -405,3 +405,9 @@ func main() {
 // 545
 // main.solange
 ```
+
+Extras from Section 2.
+
+Review of types and underlying types: [golang language spec](https://golang.org/ref/spec#Types)
+
+Link to my Quiz Answers for Section 1:[link](https://docs.google.com/forms/d/e/1FAIpQLSfyN4xMJZPoz_2bVy-BXctXfb1a64n4deYF9jj6JLnhpwA3dw/viewscore?viewscore=AE0zAgAui3w12-z7i1VLsfrFq9K_PCm3j6t8ELRNdJKx-79M-5I6edSl0U1dS8k)
