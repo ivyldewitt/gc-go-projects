@@ -230,3 +230,39 @@ func main() {
 [Go Playground Example](https://play.golang.org/p/1vp5DImIMM)
 
 
+### String Type
+------------------------------------------------------------------
+
+[Go Blog Post on Strings](https://blog.golang.org/strings)
+
+Remember, Go is all about ease of programming. A string type represents a set of string values. A string value is a (possibly empty) sequence of bytes. Strings are immutable: once created, it is impossible to change the contents of a string.
+
+A string is a sequence of bytes. Underlying, a string is a slice of bytes. Recall, a byte is an alias from int8.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+s := "Hello, 世界"
+	fmt.Printf("%s\n", s) //plain string
+	fmt.Printf("%q\n", s) //quoted string
+	fmt.Printf("%x\n", s) //hexidecimal = base 16 lower case letters
+	fmt.Printf("---%x\n", "世")
+	for i :=0; i < len(s); i++ {
+		fmt.Printf("%x ", s[i])
+	}
+	fmt.Println("")
+	for i, v := range s {
+		fmt.Printf("%#U \t %d", v, i) //Unicode, base 10
+	}
+
+}
+
+// 6U+4E16 '世' - Crazy!
+```
+
+Note: ```%x```. It just dumps out the sequential bytes of the string as hexadecimal digits, two per byte.
+
+[Playground Example](https://play.golang.org/p/dqC4SVP3pyp)

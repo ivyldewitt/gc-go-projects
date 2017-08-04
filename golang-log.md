@@ -56,7 +56,7 @@ Yesterday I spent most of my time reviewing/learning about the basics of variabl
 Mostly more review - now onto the exercises!
 
 
-**D 3: Wednesday, August 3rd, 2017**
+**D3: Wednesday, August 3rd, 2017**
 
 **What did I learn today?**:
 
@@ -76,3 +76,31 @@ Yesterday I learned about the zero value, type, the fmt package family (print, s
 **Any Reflections?**:
 Completed exercises, now onto more lessons.
 
+**D4: Thursday, August 3rd, 2017**
+
+**What did I learn today?**:
+
+Lots and lots of information about computer fundamentals and the intro to numeric types and string types.
+
+* Coding schemes, including ASCII and Unicode systems
+* The basics of circuitry/transistors - how computers run on electricty and on/off states
+* Review of the intros and evolutions of computers - vacuum tubes, silicon wafers, microprocessors, etc.
+
+* Numeric Types - ints and float64s, uints and ints, and the different 'levels' - int8, int32, int64, etc.
+* Bytes - alias for uint8. Runes - alias for int32.
+* Unsigned ints vs ints: unsigned means it starts at 0 and up, regular ints go from negative to positive.
+
+* String Types - a string is effectively a slice of bytes, which are an alias for an uint8.
+* Because of this, we can use a variety of string formatting methods to reveal the hexidecimal codes, unicode, and various other formats of the strings.
+
+
+**How does this build on from yesterday?**:
+Yesterday I mostly focused on the variable exercises, and learned about bool types - which are a way to eval true/false statements.
+
+
+**Key Takeways & Points to Review**:
+* Type: String - a slice of bytes, we can format strings down to their unicode representations.
+* Type: int and float64 - a review of numeric types, including signed/unsigned ints.
+
+**Any Reflections?**:
+Completed exercises, now onto more lessons.
