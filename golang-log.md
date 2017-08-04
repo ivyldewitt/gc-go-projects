@@ -99,8 +99,11 @@ Yesterday I mostly focused on the variable exercises, and learned about bool typ
 
 
 **Key Takeways & Points to Review**:
-* Type: String - a slice of bytes, we can format strings down to their unicode representations.
+* Type: String - a slice of bytes. We can format strings down to their unicode representations.
 * Type: int and float64 - a review of numeric types, including signed/unsigned ints.
+* Computer basics - transitors/circuits, coding schemes, and Moore's Law.
 
 **Any Reflections?**:
-Completed exercises, now onto more lessons.
+Reviewing the basics of computers and how they operate/work according to different coding formations and schemes. Overall, the basics are useful for knowing the underlying usefulness/points of computers.
+
+Regarding typing, understanding how go types relate to each other is useful. Additionally, if I remember that one of the benefits of Go is that it is 1) statically typed and b) a compiled language, and the latter means we can compile it down to machine code, understanding how strings ultimately translate to unicode characters, which ultimately represent coding schemes is useful.
