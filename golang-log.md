@@ -107,3 +107,26 @@ Yesterday I mostly focused on the variable exercises, and learned about bool typ
 Reviewing the basics of computers and how they operate/work according to different coding formations and schemes. Overall, the basics are useful for knowing the underlying usefulness/points of computers.
 
 Regarding typing, understanding how go types relate to each other is useful. Additionally, if I remember that one of the benefits of Go is that it is 1) statically typed and b) a compiled language, and the latter means we can compile it down to machine code, understanding how strings ultimately translate to unicode characters, which ultimately represent coding schemes is useful.
+
+**D5: Sunday, August 6th, 2017**
+
+**What did I learn today?**:
+
+I learned specifically about numeral systems, constants, and iota.
+
+* Iota - The representation of a number constant. Effectively, using Iota will start you at 0, and increment by one until you declare a new const.
+
+* Numeral systems - hexadecimal, binary, decimal. We use numeral systems to keep track of numbers. The most 'common' one is the base10/decimal system, and then we obviously have the binary system for computers.
+
+* Const - a keyword for constant values. They cannot be changed after being declared. We can have untyped (where we let the compiler determine the type) and typed constants.
+
+
+**How does this build on from yesterday?**:
+A few days ago I learned mostly about typing - string types, number types, etc.
+
+**Key Takeways & Points to Review**:
+* Const - a constant value, cannot be changed after being declared.
+* Numeral systems - ways we determine number types, including decimal, hexidecimal, etc.
+
+**Any Reflections?**:
+Nothing to world-ending at the moment as I'm familar with Numeral Systems now. The idea of a const also is very intuitive, so for the most part isn't too difficult to get my head around.
