@@ -17,18 +17,18 @@ Booleans are important in programming as they allow us to evaluate an expression
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 var d bool
 
 func main() {
-	fmt.Println(d)
-	d = true
-	fmt.Println(d)
+    fmt.Println(d)
+    d = true
+    fmt.Println(d)
     a := 7
-	b := 42
-	fmt.Println(a == b)
+    b := 42
+    fmt.Println(a == b)
 }
 
 ```
@@ -65,24 +65,24 @@ Single equal is assignment, double equal is comparison.
 * Bits, Bytes, KB, MB, GB, TB
 * Machine Language
 
-Computers run on electricity - electricity has two discrete states: on or off. 
+Computers run on electricity - electricity has two discrete states: on or off.
 
 We can take these states and assign coding schemes based on whether the state is on/off. *Ex: A Porch light on Halloween.*
 
 If we take the simplicity of circuits/transistors, in a state of on/off and scale that up, we have the processing system of a computer.
 
 Coding Schemes
-	* Assign meaning to ON/OFF state
-	* Porch Light on Halloween
-		* 1 porch light = 2 messages
-		* 2 porch lights = 4 messages
-		* 3 porch lights = 8 messages
-		* 4 porch lights = 16 messages
-		* 5 porch lights = 32 messages
-		* 6 porch lights = 64 messages
-		* 7 porch lights = 128 messages
-		* 8 porch lights = 258 messages
-	* The formula for finding out how many "states" we can have is 2^n.
+    * Assign meaning to ON/OFF state
+    * Porch Light on Halloween
+        * 1 porch light = 2 messages
+        * 2 porch lights = 4 messages
+        * 3 porch lights = 8 messages
+        * 4 porch lights = 16 messages
+        * 5 porch lights = 32 messages
+        * 6 porch lights = 64 messages
+        * 7 porch lights = 128 messages
+        * 8 porch lights = 258 messages
+    * The formula for finding out how many "states" we can have is 2^n.
 
 Instead of writing on/off, we can abbreviate these states with 0 = off, 1 = on.
 
@@ -142,7 +142,7 @@ Will speak about this later, but think about hexadecimal, etc.
 ### Numeric Types
 ------------------------------------------------------------------
 
-First - Integers do not have decimals (whole numbers), floating point numbers have decimals (real numbers). 
+First - Integers do not have decimals (whole numbers), floating point numbers have decimals (real numbers).
 
 Second - in the language spec we have numeric types. Do you have to use all of these data types? No. But we can be very specific with the size of ints. In general, we can typically use ```int``` and ```float64```.
 
@@ -154,7 +154,7 @@ Second - in the language spec we have numeric types. Do you have to use all of t
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 var x int8 = -129 //Will not run!
@@ -162,16 +162,16 @@ var y int8 = -128
 var z uint8 = -128 //Will not run!
 
 func main() {
-	fmt.Println(x)  // tmp/sandbox148150758/main.go:7: constant -129 overflows int8
-	fmt.Printf("%T\n", x)
-	fmt.Println(y)
-	fmt.Printf("%T\n", y)
+    fmt.Println(x)  // tmp/sandbox148150758/main.go:7: constant -129 overflows int8
+    fmt.Printf("%T\n", x)
+    fmt.Println(y)
+    fmt.Printf("%T\n", y)
 }
 ```
 
 **Uint vs int**
 
-```uint8``` stands for unsigned - if it is signed, it goes from negative to postive. If it's unsigned, it only goes from 0 upwards. 
+```uint8``` stands for unsigned - if it is signed, it goes from negative to postive. If it's unsigned, it only goes from 0 upwards.
 
 The Language Spec on [Numberic Types](https://golang.org/ref/spec#Numeric_types):
 
@@ -206,7 +206,7 @@ All numberic types are distinct except for bytes and runes.
 
 ##### Runtime
 
-Runtime packages has GOARCH, GOOS. 
+Runtime packages has GOARCH, GOOS.
 
 >"Package runtime contains operations that interact with Go's runtime system, such as functions to control goroutines. It also includes the low-level type information used by the reflect package; see reflect's documentation for the programmable interface to the run-time type system."
 
@@ -214,13 +214,13 @@ Runtime packages has GOARCH, GOOS.
 package main
 
 import (
-	"fmt"
-	"runtime"
+    "fmt"
+    "runtime"
 )
 
 func main() {
-	fmt.Println(runtime.GOOS)
-	fmt.Println(runtime.GOARCH)
+    fmt.Println(runtime.GOOS)
+    fmt.Println(runtime.GOARCH)
 }
 
 //nacl
@@ -246,17 +246,17 @@ import "fmt"
 
 func main() {
 s := "Hello, 世界"
-	fmt.Printf("%s\n", s) //plain string
-	fmt.Printf("%q\n", s) //quoted string
-	fmt.Printf("%x\n", s) //hexidecimal = base 16 lower case letters
-	fmt.Printf("---%x\n", "世")
-	for i :=0; i < len(s); i++ {
-		fmt.Printf("%x ", s[i])
-	}
-	fmt.Println("")
-	for i, v := range s {
-		fmt.Printf("%#U \t %d", v, i) //Unicode, base 10
-	}
+    fmt.Printf("%s\n", s) //plain string
+    fmt.Printf("%q\n", s) //quoted string
+    fmt.Printf("%x\n", s) //hexidecimal = base 16 lower case letters
+    fmt.Printf("---%x\n", "世")
+    for i :=0; i < len(s); i++ {
+        fmt.Printf("%x ", s[i])
+    }
+    fmt.Println("")
+    for i, v := range s {
+        fmt.Printf("%#U \t %d", v, i) //Unicode, base 10
+    }
 
 }
 
@@ -266,3 +266,138 @@ s := "Hello, 世界"
 Note: ```%x```. It just dumps out the sequential bytes of the string as hexadecimal digits, two per byte.
 
 [Playground Example](https://play.golang.org/p/dqC4SVP3pyp)
+
+### Numeral Systems
+------------------------------------------------------------------
+
+A numeral system is a system we use to keep track of numbers. One system we use is called base10. A base10 numeral system allows us to count in increments of tens. It goes from 0-9.
+
+Base 10 - you can put one digit in each of these spots. Base 10 to the power of 0. Anything to the power of 0 is one.
+
+**Decimal**
+| ten millions	| millions 	| hundred thousands	| ten thousands	| thousands	| hundreds	| tens	| ones	|
+|---------------|-----------|-------------------|---------------| ------------|-----------|-------|-------|
+| 10^7			| 10^6	 	| 10^5			| 10^4				| 10^3		| 10^2		| 10^1	| 10^0	|
+
+![example](https://docs.google.com/document/d/1GOVlFLkV0TQ49NGgX5_77JJZwJXdLgVb1sGSPk0jsAg/edit)
+
+**Binary**
+
+Base2 - We have 0s and 1s. Ones, twos, fours, eights, sixteens, thirty-twos, sixty-fours, one-twenty-eights.
+
+Ex: 42 in Binary
+
+thirty-two	| sixteen	| eights	| fours	| twos	| ones	|
+|-----------|-----------|-----------|-------|-------|-------|
+|	2^5		| 2^4		| 2^3		| 2^2	| 2^1	| 2^0	|
+|	1		| 0			| 1			| 0		| 1		| 0		|
+
+There are 10 types of people in the world. Those who understand binary and those who don't.
+
+**Hexadecimal**
+
+Also known as base16. For 16, we do 0-9, and then letters a-f to represent 10-15.
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    s := "V"
+    fmt.Println(s)
+    bs := []byte(s)
+    fmt.Println(bs)
+
+    b := bs[0]
+    fmt.Println(b)
+    fmt.Printf("%T\n", b)
+    fmt.Printf("%b\n", b)
+    fmt.Printf("%#X\n", b)
+}
+```
+
+Output:
+V
+[86]
+86
+uint8
+1010110
+0X56
+
+### Constants
+------------------------------------------------------------------
+
+Constants are a single, unchainging value - that only exists at the time of compilation. Const is reserved keyword.
+
+There are typed are untyped constants.
+* const dog = "Toby"
+* const dog string = "Toby"
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+const (
+    a int     = 42
+    b float64 = 42.78
+    c string  = "James Bond"
+)
+
+func main() {
+    fmt.Println(a)
+    fmt.Println(b)
+    fmt.Println(c)
+    fmt.Printf("%T\n", a)
+    fmt.Printf("%T\n", b)
+    fmt.Printf("%T\n", c)
+}
+```
+
+
+### Iota
+------------------------------------------------------------------
+
+The predeclared identifier iota denotes an integer constant. It is reset to 0 whenever the reserved word const appears in the source.
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+// 0, 1, 2, 3, 4, 5
+const (
+    a = iota
+    b
+    c
+    d
+    e
+    f
+)
+
+// reset - 0, 1, 2
+const (
+    h = iota
+    i
+    j
+)
+
+func main() {
+    fmt.Println(a)
+    fmt.Println(b)
+    fmt.Println(c)
+    fmt.Println(d)
+    fmt.Println(e)
+    fmt.Println(f)
+    fmt.Println(h)
+    fmt.Println(i)
+    fmt.Println(j)
+}
+```
