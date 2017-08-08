@@ -401,3 +401,65 @@ func main() {
     fmt.Println(j)
 }
 ```
+
+### Bit Shifting
+------------------------------------------------------------------
+
+Recall the binary system is 0s and 1s. Bit shifting is when you shift binary digits to the left or right. Two operators:
+
+>>
+<<
+
+Are for shifting bits.
+
+%d = decimal
+%b = binary.
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	x := 4
+	fmt.Printf("%d\t\t%b\n", x, x)
+    // 4, 100
+
+	y := x << 1
+	fmt.Printf("%d\t\t%b", y, y)
+    //8, 1000
+    z := y << 1
+	fmt.Printf("%d\t\t%b", z, z)
+    //16, 10000
+}
+
+```
+[Playground Link](https://play.golang.org/p/SBr7s4AgUo)
+
+Another example - notice that the binary digits shift up by 10 each time.
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+const (
+	_  = iota
+	kb = 1 << (iota * 10)
+	mb = 1 << (iota * 10)
+	gb = 1 << (iota * 10)
+)
+
+func main() {
+	fmt.Printf("%d\t\t\t%b\n", kb, kb)
+	fmt.Printf("%d\t\t\t%b\n", mb, mb)
+	fmt.Printf("%d\t\t%b\n", gb, gb)
+}
+
+```
+
+[Playground Link](https://play.golang.org/p/IwNVlOcrLG)
