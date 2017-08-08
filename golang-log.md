@@ -130,3 +130,30 @@ A few days ago I learned mostly about typing - string types, number types, etc.
 
 **Any Reflections?**:
 Nothing to world-ending at the moment as I'm familar with Numeral Systems now. The idea of a const also is very intuitive, so for the most part isn't too difficult to get my head around.
+
+**D6: Monday, August 7th, 2017**
+
+**What did I learn today?**:
+
+I finished up the section on programming fundamentals with a recap on bit shifting - aka what happens when we move a binary digit to the left or right.
+
+I also started a few exercises for the programming fundamentals section.
+
+**How does this build on from yesterday?**:
+Yesterday, I learned about constant values, numeral systems, and iotas (numbered constants).
+
+**Key Takeways & Points to Review**:
+* Bit Shifting - moving a binary digit from left to right.
+
+**Any Reflections?**:
+I will have to review the bit shifting section again, because at the moment I don't really quite get why it's useful? I see that it's useful for assembly programming, so at a base level my assumption is that this is useful for low-level programming. It also looks like it has applications in cryptography (this doesn't surprise me though).
+
+Some links for reference:
+
+1. [Bit Hacking in Go](https://medium.com/learning-the-go-programming-language/bit-hacking-with-go-e0acee258827)
+
+2. [Bitwise Shift](https://msdn.microsoft.com/en-us/library/f96c63ed.aspx)
+
+3. [Bit Shifting - Technopedia](https://www.techopedia.com/definition/26846/bit-shifting)
+
+4. [Stack Overflow](https://stackoverflow.com/questions/141525/what-are-bitwise-shift-bit-shift-operators-and-how-do-they-work#141873)
