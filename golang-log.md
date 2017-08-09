@@ -157,3 +157,18 @@ Some links for reference:
 3. [Bit Shifting - Technopedia](https://www.techopedia.com/definition/26846/bit-shifting)
 
 4. [Stack Overflow](https://stackoverflow.com/questions/141525/what-are-bitwise-shift-bit-shift-operators-and-how-do-they-work#141873)
+
+**D7: Tuesday, August 8th 2017**
+
+**What did I learn today?**:
+I focused on exercises today - woohoo!
+
+**How does this build on from yesterday?**:
+Yesterday I read up on bit shifting, which I admittedly still don't get, but will re-read the articles and let some of the concepts sink in.
+
+**Key Takeways & Points to Review**:
+Nothing of review today outside of the quiz + exercises. I did forget a few of the GB-TB-Byte conversions though, so a good thing to re-read later.
+
+**Any Reflections?**: 
+
+I think my log is helping me to retain my memory of day-to-day concepts, though it's obviously best if I keep at it daily instead of skipping days. Overall, its going well.

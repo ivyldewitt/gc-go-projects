@@ -463,3 +463,8 @@ func main() {
 ```
 
 [Playground Link](https://play.golang.org/p/IwNVlOcrLG)
+
+
+Quiz Results: [link](https://docs.google.com/forms/d/e/1FAIpQLSfjhxXjo0r_OsVys58B1lVs35CLPpneVcjiEKTPsLuQs4mftA/viewscore?viewscore=AE0zAgBhX75E9cVoJ9gL26H06XASuFQOQrIvbYX5S2IOA3RwBpkfpImukKOUfQ)
+
+21/21 - nice! Though I 1000% guessed on that eneiac question :)
