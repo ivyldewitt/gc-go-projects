@@ -172,3 +172,28 @@ Nothing of review today outside of the quiz + exercises. I did forget a few of t
 **Any Reflections?**: 
 
 I think my log is helping me to retain my memory of day-to-day concepts, though it's obviously best if I keep at it daily instead of skipping days. Overall, its going well.
+
+**D8: Thursday, August 10th, 2017**
+
+**What did I learn today?**:
+
+I started the section on conditional logic and control flow, starting with the for loop - which in Go services the same functions as the for loop, while loop, and do-while loop. 
+
+I also learned about nested loops, the modulus operator (though that was a bit random) and the break and continue statments.
+
+* Modulus - Provides the remainder of two numeric types.
+* Break - The way we exit out of the program if we hit a specific condition.
+* Continue - The way to skip a section of the program and continue the loop.
+
+**How does this build on from yesterday?**:
+
+Hmm, it builds on the general knowledge from programming fundamentals as we're now taking those building blocks - types, assigment, coding schemes, etc. - and bringing them into the larger flow of programmatic logic.
+
+**Key Takeways & Points to Review**:
+
+* For Loop Syntax
+* Break/Continue
+
+**Any Reflections?**: 
+
+I'm not unfamiliar w/the for loop syntax, but it's good to take a deeper second look into some of these things.
