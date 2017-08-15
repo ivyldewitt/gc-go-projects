@@ -197,3 +197,20 @@ Hmm, it builds on the general knowledge from programming fundamentals as we're n
 **Any Reflections?**: 
 
 I'm not unfamiliar w/the for loop syntax, but it's good to take a deeper second look into some of these things.
+
+**D9: Monday, August 14th, 2017**
+
+**What did I learn today?**:
+Review of more control flow basics - a greater understanding of loops, modulus, and conditionals. In particular, using conditionals with if-else.
+
+**How does this build on from yesterday?**:
+Well... it's been a few days, but it builds on from learning how to use iterations (loops) to conditionals (if-else).
+
+**Key Takeways & Points to Review**:
+
+* Conditionals allow us to better segment behavior based on different sequences.
+* Using conditions with iterative declarations allow us to repeat a sequence of actions multiple times.
+
+**Any Reflections?**: 
+
+This is useful in grounding me to the basics of conditionals and how those can be used to have a specific sequence of actions.

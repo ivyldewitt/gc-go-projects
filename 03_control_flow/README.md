@@ -204,3 +204,136 @@ func main() {
 }
 ```
 
+### For Loops - Printing ASCII
+------------------------------------------------------------------
+
+Mini-hands on challenge: using format printing:
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+//print numbers, then show as a string
+    for i := 33; i < 122; i++ {
+        fmt.Printf("%v\t%d\t%#x\t%#U\n", i, i, i, i)
+        //value, decicmal, hex, unicode
+    }
+}
+
+```
+
+[Link](https://play.golang.org/p/NAw67OyMza)
+
+### Conditionals - If Statement
+------------------------------------------------------------------
+
+In control flow, we have sequence, iterative, and conditionals. We execute statements based on specific conditions. From here, we'll see how we evaluate on a bool & initialization statement.
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    if true {
+        fmt.Println("This will print!")
+    }
+
+    if false {
+        fmt.Println("Won't print!")
+    }
+
+    if !false {
+        fmt.Println("This will print!")
+    }
+    // The above will run as its a double negative.
+
+    if 2 == 2 {
+        fmt.Println("This also prints!")
+    }
+
+    if 2 != 2 {
+        fmt.Println("This won't print!")
+    }
+}
+```
+
+We can pass evaluation expressions into if statements to return true/false.
+
+```go 
+
+package main
+
+import "fmt"
+
+func main() {
+    //Initialization in an if statement
+    if x := 22; x == 2 {
+        fmt.Println("Won't Print!")
+    }
+    fmt.Println("Here's a statement")
+}
+
+//Output: Here's a statement!
+```
+
+The above was is a good way to limit my scope. It keeps the x in the if statement which is the only place its being declared.
+
+### Conditionals - If-Else Statement
+------------------------------------------------------------------
+
+If else allows us to specifiy mulitple sequences of conditions.
+
+```go
+package main
+
+import  (
+    "fmt"
+)
+
+func main() {
+    x := 20
+    if x == 30 {
+        fmt.Println("Print me!")
+    } else if x == 21 {
+        fmt.Println("Or print me!")
+    } else {
+        fmt.Println("No, print me!!!!")
+    }
+}
+
+// Output: No, print me!!!!
+
+```
+
+### Loop, Modulus, and Conditionals
+------------------------------------------------------------------
+
+>"You are perfect just the way you are, and there is room for improvement."
+
+You write code with errors, and then you write code without errors by iterate on it. Review of Modulus exercises.
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    for v := 0; v < 100; v++ {
+        if v % 2 == 0 {
+            fmt.Printf("%v\t%#x\t%#U\n", v, v, v)
+        }
+    }
+}
+
+```
+
+[Link](https://play.golang.org/p/2q_Rm8Oxxr)
