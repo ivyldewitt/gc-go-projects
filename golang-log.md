@@ -214,3 +214,25 @@ Well... it's been a few days, but it builds on from learning how to use iteratio
 **Any Reflections?**: 
 
 This is useful in grounding me to the basics of conditionals and how those can be used to have a specific sequence of actions.
+
+**D10: Tuesday, August, 15th 2017**
+
+**What did I learn today?**:
+Completed the control flow section - review of the switch statement and a deeper dive into the documentation. Also a look into conditional operators with boolean statements.
+
+Switch Statements come in two types:
+* expression statements
+* type statements
+
+**How does this build on from yesterday?**:
+Now I can put together all of the main points of control flow - if-else, switch, etc. Now I understand how the sequential processes go, and also how I can use iterative statements (loops) and conditionals (if & switch).
+
+**Key Takeways & Points to Review**:
+
+* Conditionals allow us to better segment behavior based on different sequences.
+* Using conditions with iterative declarations allow us to repeat a sequence of actions multiple times.
+* The Switch statements can be used with fallthrough, default cases, or without an expression at all.
+
+**Any Reflections?**: 
+
+This is useful in grounding me to the basics of conditionals and how those can be used to conduct a specific sequence of actions. In conjuction with iterative statements, I can see how we can 'break' out of the standard sequence of a program by breaking it using other statements.

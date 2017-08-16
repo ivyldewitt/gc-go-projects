@@ -337,3 +337,176 @@ func main() {
 ```
 
 [Link](https://play.golang.org/p/2q_Rm8Oxxr)
+
+### Control Flow - Switch Statements
+-----------------------------------------------------------------------------------
+
+Control Flow is sequential, iterative, conditionals. How the computer reads the program. By default its sequential, then you can add iterative statements and conditionals. A switch statement will always start on on ```switch``` and then we add cases, one of which will add to true.
+
+Example with no default fallthrough:
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    switch {
+        case false:
+            fmt.Println("Won't print!")
+        case (2==4):
+            fmt.Println("Won't print!")
+        case (3==3): 
+            fmt.Println("Hmm, this prints.")
+        case (4==4):
+            fmt.Println("Does this print?")
+    }
+}
+
+//Output: "Hmm, this prints"
+```
+
+Example with fallthrough:
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    switch {
+        case false:
+            fmt.Println("Won't print!")
+        case (2==4):
+            fmt.Println("Won't print!")
+        case (3==3): 
+            fmt.Println("Hmm, this prints.")
+            fallthrough
+        case (4==4):
+            fmt.Println("Does this print?")
+            fallthrough
+        case (7==9):
+            fmt.Println("Puppies!")
+            fallthrough
+        case (11==12): 
+            fmt.Println("Will this print!?")
+    }
+}
+
+//Output: "Hmm, this prints"
+// Does this print?
+// Puppies!
+```
+Typically, we wouldn't use fallthrough as it's more confusing than helpful.
+
+Example with default:
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    switch {
+    case false:
+        fmt.Println("this should not print")
+    case (2 == 4):
+        fmt.Println("this should not print2")
+    default:
+        fmt.Println("this is default")
+    }
+}
+```
+
+Switching on a value:
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    n := "Toby"
+    switch n {
+    case "Misty", "Stormy":
+        fmt.Println("Meow!")
+    case "Toby":
+        fmt.Println("Bark bark bark bark!!!!!")
+    case "Macho":
+        fmt.Println("Arf!")
+    default:
+        fmt.Println("this is default")
+    }
+}
+```
+
+### Control Flow - Switch Statement Documentation
+-----------------------------------------------------------------------------------
+
+[Golang Lang Spec on Switch](https://golang.org/ref/spec#Switch_statements)
+>"Switch" statements provide multi-way execution. An expression or type specifier is compared to the "cases" inside the "switch" to determine which branch to execute.
+
+>There are two forms: expression switches and type switches. In an expression switch, the cases contain expressions that are compared against the value of the switch expression. In a type switch, the cases contain types that are compared against the type of a specially annotated switch expression. The switch expression is evaluated exactly once in a switch statement.
+
+Up to this point, we've only looked at the expression switches. **In an expression switch, the cases contain expressions that are compared against the value of the switch expression.**
+
+```Switch```, ```case``` and ```fallthrough``` are key words in Golang. We use switch, and then add cases within that.
+
+Expression Switches
+
+* Switch expression is evaluated
+* Case expression is evaluated
+* The first case that equals the switch expression triggers the switch - then the other cases are skipped
+* If there are no cases that match and there is a default fallthrough, then it goes to the default
+* Default can appear anywhere in the switch statement
+* A missing switch statement with no expression evals to true
+
+```go
+
+package main
+
+import "fmt"
+
+func main() {
+    switch {
+        case false:
+            fmt.Println("Won't print!")
+        case true:
+            fmt.Println("Prints!")
+    }
+}
+
+```
+
+
+### Conditional Logic Operators
+-----------------------------------------------------------------------------------
+
+Conditional Logic Operators - evaluate to true & false. Basically how we separate various conditions.
+
+```go 
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println(true || true)
+	fmt.Println(true || false)
+	fmt.Println(!true)
+}
+```
