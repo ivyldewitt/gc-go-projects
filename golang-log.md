@@ -236,3 +236,24 @@ Now I can put together all of the main points of control flow - if-else, switch,
 **Any Reflections?**: 
 
 This is useful in grounding me to the basics of conditionals and how those can be used to conduct a specific sequence of actions. In conjuction with iterative statements, I can see how we can 'break' out of the standard sequence of a program by breaking it using other statements.
+
+
+**D11: Wednesday, August 16th 2017**
+
+**What did I learn today?**:
+Control flow is done baby! Clearly I'm listening too much to Todd lol. But I've completed exercises 1-5 out of 10.
+
+**How does this build on from yesterday?**:
+Now I'm putting those skills from the previous section to use. I just need to make sure I re-read the exercise description though - I probably get tripped up on not understanding the question more than anything.
+
+**Key Takeways & Points to Review**:
+
+This is from yesterday, but I think it's still good to review.
+
+* Conditionals allow us to better segment behavior based on different sequences.
+* Using conditions with iterative declarations allow us to repeat a sequence of actions multiple times.
+* The Switch statements can be used with fallthrough, default cases, or without an expression at all.
+
+**Any Reflections?**: 
+
+The exercises are fun - challenging enough to make me think and keep me engaged.
