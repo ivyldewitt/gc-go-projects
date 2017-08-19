@@ -250,6 +250,7 @@ Now I'm putting those skills from the previous section to use. I just need to ma
 
 This is from yesterday, but I think it's still good to review.
 
+
 * Conditionals allow us to better segment behavior based on different sequences.
 * Using conditions with iterative declarations allow us to repeat a sequence of actions multiple times.
 * The Switch statements can be used with fallthrough, default cases, or without an expression at all.
