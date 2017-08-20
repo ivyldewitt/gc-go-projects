@@ -356,3 +356,138 @@ Output
 ```
 
 [Playground](https://play.golang.org/p/EB5BAVmY3u)
+
+### Map - Intro
+-----------------------------------------------------------------------------------
+
+Maps are a key-value store. This allows us to store values based on a key, and allow very fast and efficient lookup. For example, a map could be a phone book. The key is the name, and the phone number is the value.
+
+Additionally, maps are unordered lists.
+
+[Maps - Language Spec](https://mail.google.com/mail/u/0/#search/starr/15de76569ec316b1)
+
+```go
+attended := map[string]bool{
+    "Ann": true,
+    "Joe": true,
+    ...
+}
+
+if attended[person] { // will be false if person is not in the map
+    fmt.Println(person, "was at the meeting")
+}
+```
+
+>"Maps are a convenient and powerful built-in data structure that associate values of one type (the key) with values of another type (the element or value) The key can be of any type for which the equality operator is defined, such as integers, floating point and complex numbers, strings, pointers, interfaces (as long as the dynamic type supports equality), structs and arrays. Slices cannot be used as map keys, because equality is not defined on them. Like slices, maps hold references to an underlying data structure. If you pass a map to a function that changes the contents of the map, the changes will be visible in the caller."
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    //composite literal
+    m := map[string]int{
+        "Toby":  7,
+        "Macho": 9,
+        "Cato":  2,
+    }
+    fmt.Printf("%T\t", m)
+    fmt.Println(m)
+    fmt.Println(m["Macho"])
+    fmt.Println(m["Stormy"]) //returns 0 as it doesn't exist in the map
+
+    v, ok := m["Stormy"]
+    fmt.Println(v)
+    fmt.Println(ok)
+
+    if v, ok := m["Toby"]; ok {
+       fmt.Println("This is a value in the map: ", v)
+    }
+}
+
+```
+
+The above is called the comma, OK idiom.
+
+[Playground](https://play.golang.org/p/Z81jgvPUqt)
+
+### Map - Adding Elements and Ranged
+-----------------------------------------------------------------------------------
+
+Add an element to a map, use the range loop to print out a map's keys & values.
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    //composite literal
+    m := map[string]int{
+        "Toby":  7,
+        "Macho": 9,
+        "Cato":  2,
+    }
+    fmt.Printf("%T\t", m)
+    fmt.Println(m)
+    fmt.Println(m["Macho"])
+    fmt.Println(m["Stormy"]) //returns 0 as it doesn't exist in the map
+
+    v, ok := m["Stormy"]
+    fmt.Println(v)
+    fmt.Println(ok)
+
+    if v, ok := m["Toby"]; ok {
+        fmt.Println("This is a value in the map: ", v)
+    }
+
+    //adding an element to a map
+
+    m["Misty"] = 6
+
+    for i, v := range m {
+        fmt.Println(i, ":", v)
+    }
+
+}
+```
+
+### Map - Delete
+-----------------------------------------------------------------------------------
+
+You delete an entry from a map using delete(<map name>, “key”). No error is thrown if you use a key which does not exist. To confirm you delete a key/value, verify that the key/value exists with the comma ok idiom.
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    //composite literal
+    m := map[string]int{
+        "Toby":  7,
+        "Macho": 9,
+        "Cato":  2,
+    }
+
+    for i, v := range m {
+        fmt.Println(i, ":", v)
+    }
+    fmt.Println("---------")
+    delete(m, "Cato")
+
+    for i, v := range m {
+        fmt.Println(i, ":", v)
+    }
+
+}
+
+```
