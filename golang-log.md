@@ -258,3 +258,31 @@ This is from yesterday, but I think it's still good to review.
 **Any Reflections?**: 
 
 The exercises are fun - challenging enough to make me think and keep me engaged.
+
+**D13: Saturday, August 19th 2017**
+
+**What did I learn today?**:
+Note - technically I did do some exercises on 8/17 so I'll count that as a day even though I didn't write anything down for that. 
+
+I made it through the slices portion of the grouping_data section which included:
+
+* Initializing a slice with make
+* Creating slice literals
+* Using the append function to add onto slices
+* Brief review of arrays, which we typically abandon in favor for slices
+* Understanding how the underyling array concept works for slices
+* Deleting slices using apppend & slicing
+* Slicing a slice with the [:] feature
+* Multi-dimensional slices
+
+**How does this build on from yesterday?**:
+I feel like I actually have a significantly better understanding of slices, even in comparison to Go 1.0. I mostly need to review a few other things, and think about the basics of how slices can be used in a variety of situations when it comes to group similar data.
+
+**Key Takeways & Points to Review**:
+
+* The len() and cap() functions are part of every slice, but particularly essential when creating slices with make().
+* Changing and altering a slice with append changes the underlying array within the slice.
+
+**Any Reflections?**: 
+
+Not too much at the moment, but things are well. It's steady, and I don't have a greater idea of what's going at the moment.
