@@ -286,3 +286,24 @@ I feel like I actually have a significantly better understanding of slices, even
 **Any Reflections?**: 
 
 Not too much at the moment, but things are well. It's steady, and I don't have a greater idea of what's going at the moment.
+
+**D14: Sunday, August 20th, 2017**
+
+**What did I learn today?**:
+Completed the section on maps, and the ninja level exercises for the section as well.
+
+I learned about deleting map data type, creating a composite literal map data type and adding to a map data type.
+
+**How does this build on from yesterday?**:
+I feel like I actually have a significantly better understanding of slices & maps, even in comparison to Todd's 1.0 Go course. Slices allow us to create lists of a single data type, which maps allow us to create slightly more complex variations on data types - ex: I can create a map with an int as the key, but a slice of bytes as the value.
+
+Why would I do that? Eh? But it's posisble with maps.
+
+**Key Takeways & Points to Review**:
+
+* You can use a range for loop *inside* another range for loop in order to loop over the inner elements of a map if you're using another data type as the value - ex: a slice.
+* The basics of maps are relatively straightforward, and I can see why you'd used maps (ex: phone book) vs slices (ex: shopping list) vs arrays (use slices).
+
+**Any Reflections?**: 
+
+The end of the video kind of drug on a bit, but I feel a lot more comfortable using maps along with a quick review on the exercises to strengthen my overall knowledge.
