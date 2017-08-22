@@ -307,3 +307,13 @@ Why would I do that? Eh? But it's posisble with maps.
 **Any Reflections?**: 
 
 The end of the video kind of drug on a bit, but I feel a lot more comfortable using maps along with a quick review on the exercises to strengthen my overall knowledge.
+
+**D15: Monday, August 21st 2017**
+
+**What did I learn today?**:
+
+**How does this build on from yesterday?**:
+
+**Key Takeways & Points to Review**:
+
+**Any Reflections?**: 

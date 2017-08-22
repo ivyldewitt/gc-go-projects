@@ -461,7 +461,7 @@ func main() {
 ### Map - Delete
 -----------------------------------------------------------------------------------
 
-You delete an entry from a map using delete(<map name>, “key”). No error is thrown if you use a key which does not exist. To confirm you delete a key/value, verify that the key/value exists with the comma ok idiom.
+You delete an entry from a map using ```delete(<map name>, “key”)```. No error is thrown if you use a key which does not exist. To confirm you delete a key/value, verify that the key/value exists with the comma ok idiom.
 
 ```go
 package main
