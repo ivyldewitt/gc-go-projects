@@ -304,7 +304,7 @@ Why would I do that? Eh? But it's posisble with maps.
 * You can use a range for loop *inside* another range for loop in order to loop over the inner elements of a map if you're using another data type as the value - ex: a slice.
 * The basics of maps are relatively straightforward, and I can see why you'd used maps (ex: phone book) vs slices (ex: shopping list) vs arrays (use slices).
 
-**Any Reflections?**: 
+**Any Reflections?**:
 
 The end of the video kind of drug on a bit, but I feel a lot more comfortable using maps along with a quick review on the exercises to strengthen my overall knowledge.
 
@@ -312,8 +312,22 @@ The end of the video kind of drug on a bit, but I feel a lot more comfortable us
 
 **What did I learn today?**:
 
+Completed the entire section on structs! Woohoo, surprised I actually banged it out in one sitting. Overall, it was a really useful section with a great review period afterwards. I've learned the following about structs so far:
+
+* Structs are our way of creating aggregate data types - i.e. types that can hold a mix of other types.
+* We can create structs using the ```struct{}``` denotation, and add the fields and list them by type.
+* We can create anon structs, which are useful for establishing clean code.
+
 **How does this build on from yesterday?**:
 
-**Key Takeways & Points to Review**:
+I completed the exercises on grouping data with maps, arrays, and slices - so now I'm moving on from creating composite data types of a single type, to composite data types of multiple types.
 
-**Any Reflections?**: 
+**Key Takeways & Points to Review**:
+* Structs allow us to combine multiple types into a single data type.
+* They are *not* objects/classes, but similiar in nature.
+
+**Any Reflections?**:
+
+Nothing too much, overall this is useful for better understanding the 'why' of using various data types, including the composite/aggregate ones such as maps, structs, slices, and arrays.
+
+The review/housekeeping section at the end also brought up quite a few points in Go - it's not OOP, structural alignment, and how Go is all about types.
