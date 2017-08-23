@@ -1,9 +1,10 @@
 # Course Reflections
+
 *************************************
 
 Review & reflections from each day of learning to code.
 
-**D1: Monday, July 31st, 2017**
+## D1: Monday, July 31st, 2017
 
 **What did I learn today?**:
 
@@ -23,6 +24,7 @@ It doesn't! Technically this is my first day. Though I did provide an explantati
 That was a lot of fun. I won't always know the answer, but it's nice when I do!
 
 **Key Takeways & Points to Review**:
+
 * Types - primitive vs composite
 * Structure of a Go program - package main, func main, exported/non-exported functions, etc.
 * Variable declarations - with var and :=
@@ -30,8 +32,7 @@ That was a lot of fun. I won't always know the answer, but it's nice when I do!
 **Any Reflections?**:
 Not anything of note just yet - it's weird at the moment to take the same course I took before so soon, but I feel like I have a much better plan on how to go about it so I'm excited for that. That enough is a great motivator.
 
-
-**D2: Tuesday, August 1st, 2017**
+## D2: Tuesday, August 1st, 2017
 
 **What did I learn today?**:
 
@@ -48,6 +49,7 @@ Second day of v2 of the Learn How to Code course. So far I've completed Section 
 Yesterday I spent most of my time reviewing/learning about the basics of variables - including the short declaration operator, var, the basic structure of a Go program, and a short intro to types. All in all nothing new, but definitely a lot of useful info to know. 
 
 **Key Takeways & Points to Review**:
+
 * Types - declarations and conversion
 * Structure of packages - fmt - Sprint familt, Print family, Fprint family.
 * Zero values
@@ -55,8 +57,7 @@ Yesterday I spent most of my time reviewing/learning about the basics of variabl
 **Any Reflections?**:
 Mostly more review - now onto the exercises!
 
-
-**D3: Wednesday, August 3rd, 2017**
+## D3: Wednesday, August 3rd, 2017
 
 **What did I learn today?**:
 
@@ -69,14 +70,14 @@ Shorter day today - mostly just me starting to enjoy my vacation. =)
 **How does this build on from yesterday?**:
 Yesterday I learned about the zero value, type, the fmt package family (print, sprint, and fprint), and type declarations/creating types.
 
-
 **Key Takeways & Points to Review**:
+
 * Type: Bool - A way to evaluate true/false statements
 
 **Any Reflections?**:
 Completed exercises, now onto more lessons.
 
-**D4: Thursday, August 3rd, 2017**
+## D4: Thursday, August 3rd, 2017
 
 **What did I learn today?**:
 
@@ -93,12 +94,11 @@ Lots and lots of information about computer fundamentals and the intro to numeri
 * String Types - a string is effectively a slice of bytes, which are an alias for an uint8.
 * Because of this, we can use a variety of string formatting methods to reveal the hexidecimal codes, unicode, and various other formats of the strings.
 
-
 **How does this build on from yesterday?**:
 Yesterday I mostly focused on the variable exercises, and learned about bool types - which are a way to eval true/false statements.
 
-
 **Key Takeways & Points to Review**:
+
 * Type: String - a slice of bytes. We can format strings down to their unicode representations.
 * Type: int and float64 - a review of numeric types, including signed/unsigned ints.
 * Computer basics - transitors/circuits, coding schemes, and Moore's Law.
@@ -108,7 +108,7 @@ Reviewing the basics of computers and how they operate/work according to differe
 
 Regarding typing, understanding how go types relate to each other is useful. Additionally, if I remember that one of the benefits of Go is that it is 1) statically typed and b) a compiled language, and the latter means we can compile it down to machine code, understanding how strings ultimately translate to unicode characters, which ultimately represent coding schemes is useful.
 
-**D5: Sunday, August 6th, 2017**
+## D5: Sunday, August 6th, 2017
 
 **What did I learn today?**:
 
@@ -120,18 +120,18 @@ I learned specifically about numeral systems, constants, and iota.
 
 * Const - a keyword for constant values. They cannot be changed after being declared. We can have untyped (where we let the compiler determine the type) and typed constants.
 
-
 **How does this build on from yesterday?**:
 A few days ago I learned mostly about typing - string types, number types, etc.
 
 **Key Takeways & Points to Review**:
+
 * Const - a constant value, cannot be changed after being declared.
 * Numeral systems - ways we determine number types, including decimal, hexidecimal, etc.
 
 **Any Reflections?**:
 Nothing to world-ending at the moment as I'm familar with Numeral Systems now. The idea of a const also is very intuitive, so for the most part isn't too difficult to get my head around.
 
-**D6: Monday, August 7th, 2017**
+## D6: Monday, August 7th, 2017
 
 **What did I learn today?**:
 
@@ -143,6 +143,7 @@ I also started a few exercises for the programming fundamentals section.
 Yesterday, I learned about constant values, numeral systems, and iotas (numbered constants).
 
 **Key Takeways & Points to Review**:
+
 * Bit Shifting - moving a binary digit from left to right.
 
 **Any Reflections?**:
@@ -158,7 +159,7 @@ Some links for reference:
 
 4. [Stack Overflow](https://stackoverflow.com/questions/141525/what-are-bitwise-shift-bit-shift-operators-and-how-do-they-work#141873)
 
-**D7: Tuesday, August 8th 2017**
+## D7: Tuesday, August 8th 2017
 
 **What did I learn today?**:
 I focused on exercises today - woohoo!
@@ -173,11 +174,11 @@ Nothing of review today outside of the quiz + exercises. I did forget a few of t
 
 I think my log is helping me to retain my memory of day-to-day concepts, though it's obviously best if I keep at it daily instead of skipping days. Overall, its going well.
 
-**D8: Thursday, August 10th, 2017**
+## D8: Thursday, August 10th, 2017
 
 **What did I learn today?**:
 
-I started the section on conditional logic and control flow, starting with the for loop - which in Go services the same functions as the for loop, while loop, and do-while loop. 
+I started the section on conditional logic and control flow, starting with the for loop - which in Go services the same functions as the for loop, while loop, and do-while loop.
 
 I also learned about nested loops, the modulus operator (though that was a bit random) and the break and continue statments.
 
@@ -194,11 +195,11 @@ Hmm, it builds on the general knowledge from programming fundamentals as we're n
 * For Loop Syntax
 * Break/Continue
 
-**Any Reflections?**: 
+**Any Reflections?**:
 
 I'm not unfamiliar w/the for loop syntax, but it's good to take a deeper second look into some of these things.
 
-**D9: Monday, August 14th, 2017**
+## D9: Monday, August 14th, 2017
 
 **What did I learn today?**:
 Review of more control flow basics - a greater understanding of loops, modulus, and conditionals. In particular, using conditionals with if-else.
@@ -211,16 +212,17 @@ Well... it's been a few days, but it builds on from learning how to use iteratio
 * Conditionals allow us to better segment behavior based on different sequences.
 * Using conditions with iterative declarations allow us to repeat a sequence of actions multiple times.
 
-**Any Reflections?**: 
+**Any Reflections?**:
 
 This is useful in grounding me to the basics of conditionals and how those can be used to have a specific sequence of actions.
 
-**D10: Tuesday, August, 15th 2017**
+## D10: Tuesday, August, 15th 2017
 
 **What did I learn today?**:
 Completed the control flow section - review of the switch statement and a deeper dive into the documentation. Also a look into conditional operators with boolean statements.
 
 Switch Statements come in two types:
+
 * expression statements
 * type statements
 
@@ -237,8 +239,7 @@ Now I can put together all of the main points of control flow - if-else, switch,
 
 This is useful in grounding me to the basics of conditionals and how those can be used to conduct a specific sequence of actions. In conjuction with iterative statements, I can see how we can 'break' out of the standard sequence of a program by breaking it using other statements.
 
-
-**D11: Wednesday, August 16th 2017**
+## D11: Wednesday, August 16th 2017
 
 **What did I learn today?**:
 Control flow is done baby! Clearly I'm listening too much to Todd lol. But I've completed exercises 1-5 out of 10.
@@ -250,16 +251,15 @@ Now I'm putting those skills from the previous section to use. I just need to ma
 
 This is from yesterday, but I think it's still good to review.
 
-
 * Conditionals allow us to better segment behavior based on different sequences.
 * Using conditions with iterative declarations allow us to repeat a sequence of actions multiple times.
 * The Switch statements can be used with fallthrough, default cases, or without an expression at all.
 
-**Any Reflections?**: 
+**Any Reflections?**:
 
 The exercises are fun - challenging enough to make me think and keep me engaged.
 
-**D13: Saturday, August 19th 2017**
+## D13: Saturday, August 19th 2017
 
 **What did I learn today?**:
 Note - technically I did do some exercises on 8/17 so I'll count that as a day even though I didn't write anything down for that. 
@@ -283,11 +283,11 @@ I feel like I actually have a significantly better understanding of slices, even
 * The len() and cap() functions are part of every slice, but particularly essential when creating slices with make().
 * Changing and altering a slice with append changes the underlying array within the slice.
 
-**Any Reflections?**: 
+**Any Reflections?**:
 
 Not too much at the moment, but things are well. It's steady, and I don't have a greater idea of what's going at the moment.
 
-**D14: Sunday, August 20th, 2017**
+## D14: Sunday, August 20th, 2017
 
 **What did I learn today?**:
 Completed the section on maps, and the ninja level exercises for the section as well.
@@ -308,7 +308,7 @@ Why would I do that? Eh? But it's posisble with maps.
 
 The end of the video kind of drug on a bit, but I feel a lot more comfortable using maps along with a quick review on the exercises to strengthen my overall knowledge.
 
-**D15: Monday, August 21st 2017**
+## D15: Monday, August 21st 2017
 
 **What did I learn today?**:
 
@@ -323,6 +323,7 @@ Completed the entire section on structs! Woohoo, surprised I actually banged it 
 I completed the exercises on grouping data with maps, arrays, and slices - so now I'm moving on from creating composite data types of a single type, to composite data types of multiple types.
 
 **Key Takeways & Points to Review**:
+
 * Structs allow us to combine multiple types into a single data type.
 * They are *not* objects/classes, but similiar in nature.
 
@@ -331,3 +332,24 @@ I completed the exercises on grouping data with maps, arrays, and slices - so no
 Nothing too much, overall this is useful for better understanding the 'why' of using various data types, including the composite/aggregate ones such as maps, structs, slices, and arrays.
 
 The review/housekeeping section at the end also brought up quite a few points in Go - it's not OOP, structural alignment, and how Go is all about types.
+
+
+## D16: Monday, August 22nd 2017
+
+**What did I learn today?**:
+
+Completed the struct exercises - and learned quite a bit from the challenges! Was having difficulties of my own trying to implement the various technicalities and nuances of the other complex/aggregate data types - slices, maps, with structs. It took me a while to fully grasp how all of those types would correlate together, but this was a great mental exercise.
+
+**How does this build on from yesterday?**:
+
+I did breeze through the structs section, but I don't feel like that information was lost on me - I was able to successfully implement and understand the basics of structs, but also how various data types could be integrated into it. I don't recall, but previously I had only really be working w/primitive data types in structs.
+
+**Key Takeways & Points to Review**:
+
+* Looping/iterating over structs.
+* Using composite data types inside of structs.
+* Using anon structs - with bonus work using composite data types!
+
+**Any Reflections?**:
+
+Considering I'm working on a blog post on types I'm more than sure this will be useful for a variety of occasions.
