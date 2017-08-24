@@ -334,7 +334,7 @@ Nothing too much, overall this is useful for better understanding the 'why' of u
 The review/housekeeping section at the end also brought up quite a few points in Go - it's not OOP, structural alignment, and how Go is all about types.
 
 
-## D16: Monday, August 22nd 2017
+## D16: Tuesday, August 22nd 2017
 
 **What did I learn today?**:
 
@@ -353,3 +353,29 @@ I did breeze through the structs section, but I don't feel like that information
 **Any Reflections?**:
 
 Considering I'm working on a blog post on types I'm more than sure this will be useful for a variety of occasions.
+
+## D17: Wednesday, August 23rd 2017
+
+**What did I learn today?**:
+
+Technically not 100% part of this course, but I did finish part 1 of my post on an intro to types in Golang. Part 1 covers less Go syntax and more on general dynamics of types, but still useful to know overall.
+
+I also began the section on functions in Go - basically this provides a quick overview of functions - including function syntax, variadic functions, and 'unfurling' (aka passing over the values in a slice within a function) variadic functions.
+
+**How does this build on from yesterday?**:
+
+Truthfully, writing my blog post slowed me down a bit, but that was also extemely useful in better understanding the differences between static vs dyanmic typing, type checking, and strong/weak typing.
+
+From what I learned today specifically? Understanding the key points of functions in Go is useful because Go is **all about type**. And from my experience, you can end up with a lot of typing errors in functions if you're not careful.
+
+**Key Takeways & Points to Review**:
+
+* Functions have the following parts: func, receiver, identifier, params, returns, and code
+* We can implment variadic parameters with ... (such as ```x ...int```)
+* We pass in variadic arguments with the following syntax: ```xi...```
+
+**Any Reflections?**:
+
+I think in my earlier knowledge of Go I didn't quite understand why variadic functions were useful - I knew the gist of it, but wasn't really putting it together. Now with my understanding of the versatility and usefulness of slices, I understand that it's a quick, useful, and essential shortland for passing in a range of values of a specific slice type.
+
+Link: [An Introduction to Types in Go Part 1](https://zentechnista.github.io/2017/08/an-intro-to-types-in-go-part-1/)
