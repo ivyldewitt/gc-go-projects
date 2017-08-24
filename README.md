@@ -14,7 +14,7 @@ I will complete the project exercises after every section and review what I've l
 
 I summarize what I've learned each day I work on the course, a la the #100DaysOfCode style - format is below.
 
-**D1: Monday, January 1st, 2017**
+### D1: Monday, January 1st, 2017
 
 **What did I learn today?**:
 
@@ -22,4 +22,4 @@ I summarize what I've learned each day I work on the course, a la the #100DaysOf
 
 **Key Takeways & Points to Review**:
 
-**Any Reflections?**: 
+**Any Reflections?**:
