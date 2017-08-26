@@ -1,8 +1,10 @@
 # Control Flow 
-*****************************************************
 
-### Control Flow Overview
-------------------------------------------------------------------
+*************************************************************************
+
+## Control Flow Overview
+
+*************************************************************************
 
 >"When computers read code in a program, they read it from top to bottom. This is known as reading it in SEQUENCE. This is also known as SEQUENTIAL control flow. In addition to sequential control flow, there are two other statements which can affect how a computer reads code. A computer might hit a LOOP control flow. If it hits one of these, it will loop over the code in a specified manner. Loop control flow is also known as ITERATIVE control flow. Finally there is also CONDITIONAL control flow. When the computer hits a CONDITION, like an “if statement” or a “switch statement” the computer will take some course of action depending upon some condition. So the three ways a computer reads code are: SEQUENTIAL, LOOP, CONDITIONAL"
 
@@ -12,24 +14,25 @@ Computers read code in 3 specific ways:
 * Loop (iterative)
 * Conditional (do something based on a specific condition)
 
-Overviewe of different types of loops/sequences:
+Overview of different types of loops/sequences:
 
 * Sequence
 * Loop
-    * For loop
-        * Init, cond, post
-    * Bool (while)
-        * Infinite
-    * Do-While
-        * Break
-    * Continue
-    * Nested
+  * For loop
+    * Init, cond, post
+  * Bool (while)
+    * Infinite
+  * Do-While
+    * Break
+  * Continue
+  * Nested
 * Conditionals
-    * Switch/case/default statement
-    * If Statements
+  * Switch/case/default statement
+  * If Statements
 
-### Loop - Init, Condition, Post
-------------------------------------------------------------------
+## Loop - Init, Condition, Post
+
+*************************************************************************
 
 The For Loop consists of 3 parts: the initialization, the condition, and the post/increment.
 
@@ -54,8 +57,9 @@ func main() {
 
 We start the for loop, initialize, create the stop condition, and then the 'driver' or post. In Go, all we have is the for loop - no while, do while, etc.
 
-### Nested Loops
-------------------------------------------------------------------
+## Nested Loops
+
+*************************************************************************
 
 We can create a loop inside a loop. Neat thing to know for some programming puzzles.
 
@@ -76,8 +80,9 @@ func main() {
 }
 ```
 
-### For Statement Documentation
-------------------------------------------------------------------
+## For Statement Documentation
+
+*************************************************************************
 
 [Effective Go on For Loops](https://golang.org/doc/effective_go.html#for)
 
@@ -149,8 +154,9 @@ func main() {
 
 [Review](https://play.golang.org/p/1FIbTy8Ijk)
 
-### For - Break & Continue
-------------------------------------------------------------------
+## For - Break & Continue
+
+*************************************************************************
 
 Break & Continue are reserved words within Go, similiar to other languages.
 
@@ -176,7 +182,7 @@ func main() {
 
 ```
 
-**Break and Continue Overview**
+### Break and Continue Overview
 
 ```go
 
@@ -204,8 +210,9 @@ func main() {
 }
 ```
 
-### For Loops - Printing ASCII
-------------------------------------------------------------------
+## For Loops - Printing ASCII
+
+*************************************************************************
 
 Mini-hands on challenge: using format printing:
 
@@ -228,8 +235,9 @@ func main() {
 
 [Link](https://play.golang.org/p/NAw67OyMza)
 
-### Conditionals - If Statement
-------------------------------------------------------------------
+## Conditionals - If Statement
+
+*************************************************************************
 
 In control flow, we have sequence, iterative, and conditionals. We execute statements based on specific conditions. From here, we'll see how we evaluate on a bool & initialization statement.
 
@@ -285,10 +293,11 @@ func main() {
 
 The above was is a good way to limit my scope. It keeps the x in the if statement which is the only place its being declared.
 
-### Conditionals - If-Else Statement
-------------------------------------------------------------------
+## Conditionals - If-Else Statement
 
-If else allows us to specifiy mulitple sequences of conditions.
+*************************************************************************
+
+If else allows us to specify multiple sequences of conditions.
 
 ```go
 package main
@@ -312,8 +321,9 @@ func main() {
 
 ```
 
-### Loop, Modulus, and Conditionals
-------------------------------------------------------------------
+## Loop, Modulus, and Conditionals
+
+*************************************************************************
 
 >"You are perfect just the way you are, and there is room for improvement."
 
@@ -338,8 +348,9 @@ func main() {
 
 [Link](https://play.golang.org/p/2q_Rm8Oxxr)
 
-### Control Flow - Switch Statements
------------------------------------------------------------------------------------
+## Control Flow - Switch Statements
+
+*************************************************************************
 
 Control Flow is sequential, iterative, conditionals. How the computer reads the program. By default its sequential, then you can add iterative statements and conditionals. A switch statement will always start on on ```switch``` and then we add cases, one of which will add to true.
 
@@ -403,6 +414,7 @@ func main() {
 // Does this print?
 // Puppies!
 ```
+
 Typically, we wouldn't use fallthrough as it's more confusing than helpful.
 
 Example with default:
@@ -451,8 +463,9 @@ func main() {
 }
 ```
 
-### Control Flow - Switch Statement Documentation
------------------------------------------------------------------------------------
+## Control Flow - Switch Statement Documentation
+
+*************************************************************************
 
 [Golang Lang Spec on Switch](https://golang.org/ref/spec#Switch_statements)
 >"Switch" statements provide multi-way execution. An expression or type specifier is compared to the "cases" inside the "switch" to determine which branch to execute.
@@ -470,7 +483,7 @@ Expression Switches
 * The first case that equals the switch expression triggers the switch - then the other cases are skipped
 * If there are no cases that match and there is a default fallthrough, then it goes to the default
 * Default can appear anywhere in the switch statement
-* A missing switch statement with no expression evals to true
+* A missing switch statement with no expression evaluates to true
 
 ```go
 
@@ -490,23 +503,26 @@ func main() {
 ```
 
 
-### Conditional Logic Operators
------------------------------------------------------------------------------------
+## Conditional Logic Operators
+
+*************************************************************************
 
 Conditional Logic Operators - evaluate to true & false. Basically how we separate various conditions.
 
 ```go 
+
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	fmt.Println(true && true)
-	fmt.Println(true && false)
-	fmt.Println(true || true)
-	fmt.Println(true || false)
-	fmt.Println(!true)
+    fmt.Println(true && true)
+    fmt.Println(true && false)
+    fmt.Println(true || true)
+    fmt.Println(true || false)
+    fmt.Println(!true)
 }
+
 ```

@@ -1,8 +1,11 @@
 # Programming Fundamentals
-*****************************************************
 
-### Bool Type
-------------------------------------------------------------------
+*************************************************************************
+
+## Bool Type
+
+*************************************************************************
+
 Exploring types in more detail - starting with the bool type. Booleans are binary variables representing true/false values.
 
 Important to understand how the people who built this language are talking about the language.
@@ -50,10 +53,11 @@ We can use comparison operators along with our evaluation. See above for the "is
 
 Single equal is assignment, double equal is comparison.
 
-### How Computers Work
-------------------------------------------------------------------
+## How Computers Work
 
-##### Overview & Takeaways:
+*************************************************************************
+
+### Overview & Takeaways
 
 * Circuits/Switches
 * Coding Schemes
@@ -72,6 +76,7 @@ We can take these states and assign coding schemes based on whether the state is
 If we take the simplicity of circuits/transistors, in a state of on/off and scale that up, we have the processing system of a computer.
 
 Coding Schemes
+
     * Assign meaning to ON/OFF state
     * Porch Light on Halloween
         * 1 porch light = 2 messages
@@ -86,7 +91,7 @@ Coding Schemes
 
 Instead of writing on/off, we can abbreviate these states with 0 = off, 1 = on.
 
-##### Coding Schemes - Example
+#### Coding Schemes - Example
 
 |	States	|	Action		|
 |-----------|---------------|
@@ -109,7 +114,6 @@ Circuits/switches/transistors, all of these are relating to the core fact that t
 * World's largest coding scheme
 * First part of UTF-8 is ASCII
 
-
 ##### Measuring Bits
 
 * 1 bit
@@ -121,9 +125,9 @@ Circuits/switches/transistors, all of these are relating to the core fact that t
 
 ##### History of Computers
 
-First computer was the Eniac - came about in the 1940s. Had 16,000 porch lights. Instead of using lightbulbs they were using vaccum tubes to represent on/off states.
+First computer was the Eniac - came about in the 1940s. Had 16,000 porch lights. Instead of using lightbulbs they were using vacuum tubes to represent on/off states.
 
-Problem - these vaccum tubles were hot and ran/off off.
+Problem - these vacuum tubes were hot and ran/off off.
 
 ![computer-bug](https://static.businessinsider.com/image/5593f5cc6bb3f7ac51d8d3cf/image.jpg)
 
@@ -139,15 +143,15 @@ Moore's Law: Moore's law is the observation that the number of transistors in a 
 
 Will speak about this later, but think about hexadecimal, etc.
 
-### Numeric Types
-------------------------------------------------------------------
+## Numeric Types
+
+*************************************************************************
 
 First - Integers do not have decimals (whole numbers), floating point numbers have decimals (real numbers).
 
 Second - in the language spec we have numeric types. Do you have to use all of these data types? No. But we can be very specific with the size of ints. In general, we can typically use ```int``` and ```float64```.
 
 [Caleb Doxsey's Book](https://www.golang-book.com/books/intro/3)
-
 
 ```go
 
@@ -169,13 +173,14 @@ func main() {
 }
 ```
 
-**Uint vs int**
+### Uint vs int
 
 ```uint8``` stands for unsigned - if it is signed, it goes from negative to postive. If it's unsigned, it only goes from 0 upwards.
 
 The Language Spec on [Numberic Types](https://golang.org/ref/spec#Numeric_types):
 
-```
+```plaintext
+
 uint8       the set of all unsigned  8-bit integers (0 to 255)
 uint16      the set of all unsigned 16-bit integers (0 to 65535)
 uint32      the set of all unsigned 32-bit integers (0 to 4294967295)
@@ -194,23 +199,24 @@ complex128  the set of all complex numbers with float64 real and imaginary parts
 
 byte        alias for uint8
 rune        alias for int32
+
 ```
 
 We also have implementation specific sizes. For example, ```int``` and ```uint``` can store either 32 or 64 bits. And the compiled will determined whether it'll be 32 or 64 - mechanical sympathy.
 
-All numberic types are distinct except for bytes and runes.
+All numeric types are distinct except for bytes and runes.
 
 * ```byte``` - alias for uint8 (byte is 8 bits)
 * ```rune``` - alias for int32 (32 0s and 1s - runes are characters. Go uses the UTF-8 coding scheme, and runes are representations of that.)
 
-
-##### Runtime
+#### Runtime
 
 Runtime packages has GOARCH, GOOS.
 
->"Package runtime contains operations that interact with Go's runtime system, such as functions to control goroutines. It also includes the low-level type information used by the reflect package; see reflect's documentation for the programmable interface to the run-time type system."
+>"Package runtime contains operations that interact with Go's runtime system, such as functions to control goroutines. It also includes the low-level type information used by the reflect package; see documentation for the programmable interface to the run-time type system."
 
 ```go
+
 package main
 
 import (
@@ -229,9 +235,9 @@ func main() {
 
 [Go Playground Example](https://play.golang.org/p/1vp5DImIMM)
 
+## String Type
 
-### String Type
-------------------------------------------------------------------
+*************************************************************************
 
 [Go Blog Post on Strings](https://blog.golang.org/strings)
 
@@ -240,6 +246,7 @@ Remember, Go is all about ease of programming. A string type represents a set of
 A string is a sequence of bytes. Underlying, a string is a slice of bytes. Recall, a byte is an alias from int8.
 
 ```go
+
 package main
 
 import "fmt"
@@ -261,27 +268,30 @@ s := "Hello, 世界"
 }
 
 // 6U+4E16 '世' - Crazy!
+
 ```
 
 Note: ```%x```. It just dumps out the sequential bytes of the string as hexadecimal digits, two per byte.
 
 [Playground Example](https://play.golang.org/p/dqC4SVP3pyp)
 
-### Numeral Systems
-------------------------------------------------------------------
+## Numeral Systems
+
+*************************************************************************
 
 A numeral system is a system we use to keep track of numbers. One system we use is called base10. A base10 numeral system allows us to count in increments of tens. It goes from 0-9.
 
 Base 10 - you can put one digit in each of these spots. Base 10 to the power of 0. Anything to the power of 0 is one.
 
-**Decimal**
+### Decimal
+
 | ten millions	| millions 	| hundred thousands	| ten thousands	| thousands	| hundreds	| tens	| ones	|
 |---------------|-----------|-------------------|---------------| ------------|-----------|-------|-------|
 | 10^7			| 10^6	 	| 10^5			| 10^4				| 10^3		| 10^2		| 10^1	| 10^0	|
 
 ![example](https://docs.google.com/document/d/1GOVlFLkV0TQ49NGgX5_77JJZwJXdLgVb1sGSPk0jsAg/edit)
 
-**Binary**
+### Binary
 
 Base2 - We have 0s and 1s. Ones, twos, fours, eights, sixteens, thirty-twos, sixty-fours, one-twenty-eights.
 
@@ -294,11 +304,12 @@ thirty-two	| sixteen	| eights	| fours	| twos	| ones	|
 
 There are 10 types of people in the world. Those who understand binary and those who don't.
 
-**Hexadecimal**
+### Hexadecimal
 
 Also known as base16. For 16, we do 0-9, and then letters a-f to represent 10-15.
 
 ```go
+
 package main
 
 import (
@@ -317,6 +328,7 @@ func main() {
     fmt.Printf("%b\n", b)
     fmt.Printf("%#X\n", b)
 }
+
 ```
 
 Output:
@@ -327,16 +339,18 @@ uint8
 1010110
 0X56
 
-### Constants
-------------------------------------------------------------------
+## Constants
 
-Constants are a single, unchainging value - that only exists at the time of compilation. Const is reserved keyword.
+*************************************************************************
+
+Constants are a single, unchanging value - that only exists at the time of compilation. Const is reserved keyword.
 
 There are typed are untyped constants.
 * const dog = "Toby"
 * const dog string = "Toby"
 
 ```go
+
 package main
 
 import (
@@ -357,15 +371,17 @@ func main() {
     fmt.Printf("%T\n", b)
     fmt.Printf("%T\n", c)
 }
+
 ```
 
+## Iota
 
-### Iota
-------------------------------------------------------------------
+*************************************************************************
 
-The predeclared identifier iota denotes an integer constant. It is reset to 0 whenever the reserved word const appears in the source.
+The pre-declared identifier iota denotes an integer constant. It is reset to 0 whenever the reserved word const appears in the source.
 
 ```go
+
 package main
 
 import (
@@ -400,10 +416,12 @@ func main() {
     fmt.Println(i)
     fmt.Println(j)
 }
+
 ```
 
-### Bit Shifting
-------------------------------------------------------------------
+## Bit Shifting
+
+*************************************************************************
 
 Recall the binary system is 0s and 1s. Bit shifting is when you shift binary digits to the left or right. Two operators:
 
@@ -416,22 +434,23 @@ Are for shifting bits.
 %b = binary.
 
 ```go
+
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func main() {
-	x := 4
-	fmt.Printf("%d\t\t%b\n", x, x)
+    x := 4
+    fmt.Printf("%d\t\t%b\n", x, x)
     // 4, 100
 
-	y := x << 1
-	fmt.Printf("%d\t\t%b", y, y)
+    y := x << 1
+    fmt.Printf("%d\t\t%b", y, y)
     //8, 1000
     z := y << 1
-	fmt.Printf("%d\t\t%b", z, z)
+    fmt.Printf("%d\t\t%b", z, z)
     //16, 10000
 }
 
@@ -441,23 +460,24 @@ func main() {
 Another example - notice that the binary digits shift up by 10 each time.
 
 ```go
+
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 const (
-	_  = iota
-	kb = 1 << (iota * 10)
-	mb = 1 << (iota * 10)
-	gb = 1 << (iota * 10)
+    _  = iota
+    kb = 1 << (iota * 10)
+    mb = 1 << (iota * 10)
+    gb = 1 << (iota * 10)
 )
 
 func main() {
-	fmt.Printf("%d\t\t\t%b\n", kb, kb)
-	fmt.Printf("%d\t\t\t%b\n", mb, mb)
-	fmt.Printf("%d\t\t%b\n", gb, gb)
+    fmt.Printf("%d\t\t\t%b\n", kb, kb)
+    fmt.Printf("%d\t\t\t%b\n", mb, mb)
+    fmt.Printf("%d\t\t%b\n", gb, gb)
 }
 
 ```

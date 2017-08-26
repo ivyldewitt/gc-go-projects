@@ -1,4 +1,5 @@
 # Grouping Data
+
 ***********************************************************************************
 
 Looking at structures that allow us to group the same types together. Or in the case of structs, different types.
@@ -7,8 +8,9 @@ Taking values of a specific type and putting them into one data structure. You c
 
 A composite data type is a type using other primitive types or other composite/aggregate types.
 
-### Arrays
------------------------------------------------------------------------------------
+## Arrays
+
+***********************************************************************************
 
 At its core an array in Go is that it is a building block. For arrays, we specify the size at the start. Arrays in Go (and in most languages) start at a 0-based index.
 
@@ -50,8 +52,9 @@ func main() {
 // [65 88 0 23 0]
 ```
 
-### Slices - Composite Literals
------------------------------------------------------------------------------------
+## Slices - Composite Literals
+
+***********************************************************************************
 
 At its core, a slice holds values of the same type. In this video, we'll use the composite literal to create a slice. Composite literals are created by having the TYPE followed by CURLY BRACES and then putting the appropriate values in the curly brace area.
 
@@ -79,8 +82,9 @@ func main() {
 
 ```
 
-### Slices - For Range
------------------------------------------------------------------------------------
+## Slices - For Range
+
+***********************************************************************************
 
 We can loop over a slice in the range clause, and access them via the index position.
 
@@ -106,10 +110,12 @@ func main() {
 //A slice allows you to group VALUES of the same TYPE.
 
 ```
+
 [Playground](https://play.golang.org/p/De0jNGYADF)
 
-### Slices - Slicing a Slice
------------------------------------------------------------------------------------
+## Slices - Slicing a Slice
+
+***********************************************************************************
 
 ```go
 package main
@@ -130,14 +136,16 @@ func main() {
     }
 }
 ```
+
 For ```fmt.Println(w[1:3])``` it's important to note that we go up to, but not including that specific position in the slice. We print out 45, 91, but **not** 56.
 
 Note that slicing a slice is also how we delete a slice. If we wanted to take out a number, we could slice different sections and combine it into a new slice.
 
 [Playground](https://play.golang.org/p/p-THBlesrg)
 
-### Slices - Appending a Slice
------------------------------------------------------------------------------------
+## Slices - Appending a Slice
+
+***********************************************************************************
 
 Now we have the missing piece we needed to explain the design of the append built-in function. The signature of append is different from our custom Append function above. Schematically, it's like this:
 
@@ -182,9 +190,9 @@ slice = append(slice, anotherSlice...)
 
 [GoDoc - Append](https://godoc.org/builtin#append)
 
+## Slices - Deleting a Slice
 
-### Slices - Deleting a Slice
------------------------------------------------------------------------------------
+***********************************************************************************
 
 We can delete from a slice using both append and slicing. This is a wonderful and elegant example of why Go is great and how Go provides ease of programming.
 
@@ -200,11 +208,11 @@ func main() {
     fmt.Println(w)
     w = append(w, 6, 23, 86, 99, 923)
     fmt.Println(w)
-    
+
     e := []int{62, 44, 73, 332}
     w = append(w, e...)
     fmt.Println(w)
-    
+
     w = append(w[:2], w[5:]...) //... our way of 'unfurling' th data
     fmt.Println(w)
 
@@ -214,9 +222,9 @@ func main() {
 ```
 [Playground](https://play.golang.org/p/TxjVHlvQEk)
 
+## Slices - Make
 
-### Slices - Make
------------------------------------------------------------------------------------
+***********************************************************************************
 
 Slices are built on top of arrays. A slice is dynamic in that it will grow in size. The underlying array, however, does not grow in size. When we create a slice, we can use the built in function make to specify how large our slice should be and also how large the underlying array should be. This can enhance performance a little bit.
 
@@ -259,11 +267,13 @@ func main() {
    //Note: We can't do something like a[10] = 333 
 }
 ```
+
 Every time we append to a slice, we increase its length. But only the capacity if it's larger than the underlying array. Typically we try to create the largest capacity earlier if we can - in order to prevent us from using up processing power by constantly having to recreate the length and increase the capacity.
 
 
-### Slices - Multi-Dimensional Slice
------------------------------------------------------------------------------------
+## Slices - Multi-Dimensional Slice
+
+***********************************************************************************
 
 A multi-dimensional slice is like a spreadsheet. **You can have a slice of a slice of some type.**
 
@@ -279,17 +289,16 @@ func main() {
     fmt.Println(favLanguages)
     langsToLearn := []string{"elixir", "scala", "r"}
     fmt.Println(langsToLearn)
-    
+
     combinedLangs := [][]string{favLanguages, langsToLearn}
     fmt.Println(combinedLangs)
-    
 }
 ```
 [Playground](https://play.golang.org/p/hXvXBI1abe)
 
-### Slices - Underlying Array
------------------------------------------------------------------------------------
+## Slices - Underlying Array
 
+***********************************************************************************
 Underlying every slice is an array. A slice is a data structure that which contains three parts:
 
 1. A pointer to an array
@@ -316,7 +325,7 @@ func main() {
 }
 ```
 
-**Ex: Same Underlying Array**
+### Ex: Same Underlying Array
 
 ```go
 package main
@@ -344,7 +353,8 @@ func main() {
 
 Both x & y are pointing to the same underlying array. X is now changed due to this change in the underlying array.
 
-```
+```plaintext
+
 Output
 [42 43 44 45 46 47 48 49 50 51]
 [42 43 47 48 49 50 51 49 50 51]
@@ -353,12 +363,14 @@ Output
 10
 10
 10
+
 ```
 
 [Playground](https://play.golang.org/p/EB5BAVmY3u)
 
-### Map - Intro
------------------------------------------------------------------------------------
+## Map - Intro
+
+***********************************************************************************
 
 Maps are a key-value store. This allows us to store values based on a key, and allow very fast and efficient lookup. For example, a map could be a phone book. The key is the name, and the phone number is the value.
 
@@ -415,8 +427,9 @@ The above is called the comma, OK idiom.
 
 [Playground](https://play.golang.org/p/Z81jgvPUqt)
 
-### Map - Adding Elements and Ranged
------------------------------------------------------------------------------------
+## Map - Adding Elements and Ranged
+
+***********************************************************************************
 
 Add an element to a map, use the range loop to print out a map's keys & values.
 
@@ -458,8 +471,9 @@ func main() {
 }
 ```
 
-### Map - Delete
------------------------------------------------------------------------------------
+## Map - Delete
+
+***********************************************************************************
 
 You delete an entry from a map using ```delete(<map name>, “key”)```. No error is thrown if you use a key which does not exist. To confirm you delete a key/value, verify that the key/value exists with the comma ok idiom.
 

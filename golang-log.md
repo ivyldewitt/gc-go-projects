@@ -11,7 +11,7 @@ Review & reflections from each day of learning to code.
 Today, I started v2 of the Learn How to Code course. So far, I've covered the following topics:
 
 * Learning the basics of the Go playground and its uses for debugging/sharing code.
-* Review of the basics of a Go program - including package main, func main, how imported packages work, and the distinction of visible/non-visible packages. 
+* Review of the basics of a Go program - including package main, func main, how imported packages work, and the distinction of visible/non-visible packages.
 * A quick recap of Go Fmt, and go's formatting rules.
 * How we use the short declaration operator, and some key terms such as expression, statement, operand and operator.
 * The var keyword, which we can use to declare variables at the package level, instead of within a specific function's scope.
@@ -19,11 +19,11 @@ Today, I started v2 of the Learn How to Code course. So far, I've covered the fo
 * Types - Go is statically typed, not dynamic like JS/Python. That means when you declare a type as an int, string, etc. that's exactly what it is and it can't be changed. I also reviewed primitive data types (ints, floats) vs composite types (structs, arrays, etc).
 
 **How does this build on from yesterday?**:
-It doesn't! Technically this is my first day. Though I did provide an explantation to someone else yesterday. I added that as a separate answer in my 01 folder. 
+It doesn't! Technically this is my first day. Though I did provide an explanation to someone else yesterday. I added that as a separate answer in my 01 folder. 
 
 That was a lot of fun. I won't always know the answer, but it's nice when I do!
 
-**Key Takeways & Points to Review**:
+**Key Takeaways & Points to Review**:
 
 * Types - primitive vs composite
 * Structure of a Go program - package main, func main, exported/non-exported functions, etc.
@@ -48,10 +48,10 @@ Second day of v2 of the Learn How to Code course. So far I've completed Section 
 **How does this build on from yesterday?**:
 Yesterday I spent most of my time reviewing/learning about the basics of variables - including the short declaration operator, var, the basic structure of a Go program, and a short intro to types. All in all nothing new, but definitely a lot of useful info to know. 
 
-**Key Takeways & Points to Review**:
+**Key Takeaways & Points to Review**:
 
 * Types - declarations and conversion
-* Structure of packages - fmt - Sprint familt, Print family, Fprint family.
+* Structure of packages - fmt - Sprint family, Print family, Fprint family.
 * Zero values
 
 **Any Reflections?**:
@@ -84,7 +84,7 @@ Completed exercises, now onto more lessons.
 Lots and lots of information about computer fundamentals and the intro to numeric types and string types.
 
 * Coding schemes, including ASCII and Unicode systems
-* The basics of circuitry/transistors - how computers run on electricty and on/off states
+* The basics of circuitry/transistors - how computers run on electricity and on/off states
 * Review of the intros and evolutions of computers - vacuum tubes, silicon wafers, microprocessors, etc.
 
 * Numeric Types - ints and float64s, uints and ints, and the different 'levels' - int8, int32, int64, etc.
@@ -92,10 +92,10 @@ Lots and lots of information about computer fundamentals and the intro to numeri
 * Unsigned ints vs ints: unsigned means it starts at 0 and up, regular ints go from negative to positive.
 
 * String Types - a string is effectively a slice of bytes, which are an alias for an uint8.
-* Because of this, we can use a variety of string formatting methods to reveal the hexidecimal codes, unicode, and various other formats of the strings.
+* Because of this, we can use a variety of string formatting methods to reveal the hexadecimal codes, unicode, and various other formats of the strings.
 
 **How does this build on from yesterday?**:
-Yesterday I mostly focused on the variable exercises, and learned about bool types - which are a way to eval true/false statements.
+Yesterday I mostly focused on the variable exercises, and learned about bool types - which are a way to evaluate true/false statements.
 
 **Key Takeways & Points to Review**:
 
@@ -126,10 +126,10 @@ A few days ago I learned mostly about typing - string types, number types, etc.
 **Key Takeways & Points to Review**:
 
 * Const - a constant value, cannot be changed after being declared.
-* Numeral systems - ways we determine number types, including decimal, hexidecimal, etc.
+* Numeral systems - ways we determine number types, including decimal, hexadecimal, etc.
 
 **Any Reflections?**:
-Nothing to world-ending at the moment as I'm familar with Numeral Systems now. The idea of a const also is very intuitive, so for the most part isn't too difficult to get my head around.
+Nothing to world-ending at the moment as I'm familiar with Numeral Systems now. The idea of a const also is very intuitive, so for the most part isn't too difficult to get my head around.
 
 ## D6: Monday, August 7th, 2017
 
@@ -180,7 +180,7 @@ I think my log is helping me to retain my memory of day-to-day concepts, though 
 
 I started the section on conditional logic and control flow, starting with the for loop - which in Go services the same functions as the for loop, while loop, and do-while loop.
 
-I also learned about nested loops, the modulus operator (though that was a bit random) and the break and continue statments.
+I also learned about nested loops, the modulus operator (though that was a bit random) and the break and continue statements.
 
 * Modulus - Provides the remainder of two numeric types.
 * Break - The way we exit out of the program if we hit a specific condition.
@@ -235,9 +235,9 @@ Now I can put together all of the main points of control flow - if-else, switch,
 * Using conditions with iterative declarations allow us to repeat a sequence of actions multiple times.
 * The Switch statements can be used with fallthrough, default cases, or without an expression at all.
 
-**Any Reflections?**: 
+**Any Reflections?**:
 
-This is useful in grounding me to the basics of conditionals and how those can be used to conduct a specific sequence of actions. In conjuction with iterative statements, I can see how we can 'break' out of the standard sequence of a program by breaking it using other statements.
+This is useful in grounding me to the basics of conditionals and how those can be used to conduct a specific sequence of actions. In conjunction with iterative statements, I can see how we can 'break' out of the standard sequence of a program by breaking it using other statements.
 
 ## D11: Wednesday, August 16th 2017
 
@@ -270,8 +270,8 @@ I made it through the slices portion of the grouping_data section which included
 * Creating slice literals
 * Using the append function to add onto slices
 * Brief review of arrays, which we typically abandon in favor for slices
-* Understanding how the underyling array concept works for slices
-* Deleting slices using apppend & slicing
+* Understanding how the underlying array concept works for slices
+* Deleting slices using append & slicing
 * Slicing a slice with the [:] feature
 * Multi-dimensional slices
 
@@ -297,7 +297,7 @@ I learned about deleting map data type, creating a composite literal map data ty
 **How does this build on from yesterday?**:
 I feel like I actually have a significantly better understanding of slices & maps, even in comparison to Todd's 1.0 Go course. Slices allow us to create lists of a single data type, which maps allow us to create slightly more complex variations on data types - ex: I can create a map with an int as the key, but a slice of bytes as the value.
 
-Why would I do that? Eh? But it's posisble with maps.
+Why would I do that? Eh? But it's possible with maps.
 
 **Key Takeways & Points to Review**:
 
@@ -325,7 +325,7 @@ I completed the exercises on grouping data with maps, arrays, and slices - so no
 **Key Takeways & Points to Review**:
 
 * Structs allow us to combine multiple types into a single data type.
-* They are *not* objects/classes, but similiar in nature.
+* They are *not* objects/classes, but similar in nature.
 
 **Any Reflections?**:
 
@@ -364,18 +364,40 @@ I also began the section on functions in Go - basically this provides a quick ov
 
 **How does this build on from yesterday?**:
 
-Truthfully, writing my blog post slowed me down a bit, but that was also extemely useful in better understanding the differences between static vs dyanmic typing, type checking, and strong/weak typing.
+Truthfully, writing my blog post slowed me down a bit, but that was also extremely useful in better understanding the differences between static vs dynamic typing, type checking, and strong/weak typing.
 
 From what I learned today specifically? Understanding the key points of functions in Go is useful because Go is **all about type**. And from my experience, you can end up with a lot of typing errors in functions if you're not careful.
 
 **Key Takeways & Points to Review**:
 
 * Functions have the following parts: func, receiver, identifier, params, returns, and code
-* We can implment variadic parameters with ... (such as ```x ...int```)
+* We can implement variadic parameters with ... (such as ```x ...int```)
 * We pass in variadic arguments with the following syntax: ```xi...```
 
 **Any Reflections?**:
 
-I think in my earlier knowledge of Go I didn't quite understand why variadic functions were useful - I knew the gist of it, but wasn't really putting it together. Now with my understanding of the versatility and usefulness of slices, I understand that it's a quick, useful, and essential shortland for passing in a range of values of a specific slice type.
+I think in my earlier knowledge of Go I didn't quite understand why variadic functions were useful - I knew the gist of it, but wasn't really putting it together. Now with my understanding of the versatility and usefulness of slices, I understand that it's a quick, useful, and essential shorthand for passing in a range of values of a specific slice type.
 
 Link: [An Introduction to Types in Go Part 1](https://zentechnista.github.io/2017/08/an-intro-to-types-in-go-part-1/)
+
+## D18: Friday, August 25th 2017
+
+**What did I learn today?**:
+
+Deep dive into the defer keyword, understand how methods work with types, and a *really* intricate look into interfaces and polymorphism.
+
+**How does this build on from yesterday?**:
+
+Yesterday (well Wednesday), I focused on the basics of functions, including the syntax and application. Now I'm seeing how functions are used on an a more practical level, especially interfaces and polymorphism.
+
+**Key Takeways & Points to Review**:
+
+* Polymorphism: In Go, this refers to the fact that a method can be attached to many types, and it can take on different forms based on that type.
+* Interfaces: Allow us to implement methods that can be used by a variety of types. We can see this with some interfaces such as the io.Writer interface, which allows us to implement methods from many packages including the net/http package.
+* Empty Interfaces: All types have at least *no* methods. This means that all types are also type empty interface.
+* Methods are functions attached to types.
+* The defer statement allows us to defer a function to the end of the execution of the main program.
+
+**Any Reflections?**:
+
+It's a lot to take in, but I have confidence that I can do it! Wish me luck.

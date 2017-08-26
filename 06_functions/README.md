@@ -12,7 +12,7 @@ Functions are about being modular - breaking up code into smaller chunks. Back i
 
 In Go, one way to break up code is functions - another is packages.
 
-All functions start with func which is a keyword. Then it has a receiver which is attached to a type. Then an identifier, then params in the identifier, what is being returned, and the code.
+All functions start with func which is a keyword. Then it has a receiver which is attached to a type. Then an identifier, then parameters in the identifier, what is being returned, and the code.
 
 ```go
 package main
@@ -63,7 +63,7 @@ Everything in Go is pass by value - what you see is what you get.
 
 ***********************************************************************************
 
-We can create a function that takes in an unlimited number of arguments using hte variadic parameter. We use the lexical opearator (...T) in order to pass in vlues of a specific type.
+We can create a function that takes in an unlimited number of arguments using the variadic parameter. We use the lexical operator (...T) in order to pass in values of a specific type.
 
 ```go
 package main
@@ -144,7 +144,7 @@ func vary(x ...int) int {
 
 [Unfurling a Slice](https://play.golang.org/p/QuvTFBw-yc)
 
-Note that varadic means 0 or more number of arguments. We can legtimately pass in 0 and that's also fine.
+Note that variadic means 0 or more number of arguments. We can legitimately pass in 0 and that's also fine.
 
 [Todd's Link Go Playground](https://play.golang.org/p/Qc5sq_AK_T)
 
@@ -208,7 +208,7 @@ Receiver   = Parameters .
 
 >"The receiver is specified via an extra parameter section preceding the method name. That parameter section must declare a single non-variadic parameter, the receiver. Its type must be of the form T or *T (possibly using parentheses) where T is a type name. The type denoted by T is called the receiver base type; it must not be a pointer or interface type and it must be defined in the same package as the method. The method is said to be bound to the base type and the method name is visible only within selectors for type T or *T."
 
-[Golang Lang Spec - Method Declariations](https://golang.org/ref/spec#Method_declarations)
+[Golang Lang Spec - Method Declarations](https://golang.org/ref/spec#Method_declarations)
 
 When you have a receiver you attach a function to that type. So any value of that type has access to that method.
 
@@ -328,75 +328,75 @@ We can also implement a special switch statement to switch on type person via ``
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 type animal interface {
-	speak()
+    speak()
 }
 
 type dog struct {
-	name     string
-	breed    string
-	fourLegs bool
+    name     string
+    breed    string
+    fourLegs bool
 }
 
 type cartoonDog struct {
-	dog
-	catchphrase string
+    dog
+    catchphrase string
 }
 
 func (c cartoonDog) speak() {
-	fmt.Println("Ruh-Roh! We're in trouble!")
+    fmt.Println("Ruh-Roh! We're in trouble!")
 }
 
 func (d dog) speak() {
 
-	fmt.Println(d.name, "says woof!")
+    fmt.Println(d.name, "says woof!")
 }
 
 func animalSpeak(a animal) {
-	switch a.(type) {
-	case dog:
-		fmt.Println("I am on top of the animal kingdom!", a.(dog).name)
-	case cartoonDog:
-		fmt.Println("I am on top of the animal kingdom!", a.(cartoonDog).name)
-	}
+    switch a.(type) {
+    case dog:
+        fmt.Println("I am on top of the animal kingdom!", a.(dog).name)
+    case cartoonDog:
+        fmt.Println("I am on top of the animal kingdom!", a.(cartoonDog).name)
+    }
 }
 
 //func (r receiver) identifier(params) return(s) {}
 
 func main() {
-	d1 := dog{
-		name:     "Toby",
-		breed:    "Pomeranian-Sheltie Mix",
-		fourLegs: true,
-	}
+    d1 := dog{
+        name:     "Toby",
+        breed:    "Pomeranian-Sheltie Mix",
+        fourLegs: true,
+    }
 
-	d2 := dog{
-		name:     "Macho",
-		breed:    "Bishon mix?",
-		fourLegs: true,
-	}
+    d2 := dog{
+        name:     "Macho",
+        breed:    "Bishon mix?",
+        fourLegs: true,
+    }
 
-	scooby := cartoonDog{
-		dog: dog{
-			name:     "Scooby Dog",
-			breed:    "Mutt",
-			fourLegs: true,
-		},
-		catchphrase: "Ruh-roh!",
-	}
+    scooby := cartoonDog{
+        dog: dog{
+            name:     "Scooby Dog",
+            breed:    "Mutt",
+            fourLegs: true,
+        },
+        catchphrase: "Ruh-roh!",
+    }
 
-	fmt.Println(d1)
-	fmt.Println(d2)
-	fmt.Println(scooby)
-	scooby.speak()
-	d2.speak()
-	d1.speak()
+    fmt.Println(d1)
+    fmt.Println(d2)
+    fmt.Println(scooby)
+    scooby.speak()
+    d2.speak()
+    d1.speak()
 
-	animalSpeak(scooby)
-	animalSpeak(d1)
+    animalSpeak(scooby)
+    animalSpeak(d1)
 }
 ```
 
