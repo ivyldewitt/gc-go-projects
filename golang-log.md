@@ -401,3 +401,23 @@ Yesterday (well Wednesday), I focused on the basics of functions, including the 
 **Any Reflections?**:
 
 It's a lot to take in, but I have confidence that I can do it! Wish me luck.
+
+## D19: Tuesday, August 29, 2017
+
+**What did I learn today?**:
+
+A deeper review into functions including anonymous functions and function expressions, which is good since I'm still in the 'what does all of the this mean???' section of functions and interfaces. I think I'm getting better at being more intuitive on some of the major parts though.
+
+**How does this build on from yesterday?**:
+
+I took a few days off of this project - for good reason though, I was learning JavaScript instead. But I now am coming back to this with a more rounded and understanding perspective in my opinion - I think that I can better comprehend what's going on here and what I should be focusing on.
+
+**Key Takeways & Points to Review**:
+
+* Function Expressions: Assiging a function to a variable.
+* Returning functions in functions: Functions are types, just like all other types in Go and we can return a function in another function. My hypothesis to why this might be useful is in terms of trying to manage our scope.
+* Anon Functions: Exactly what it says on the tin - it's an anon function.
+
+**Any Reflections?**:
+
+Still reviewing, but I think I'm working my way up, and luckily I'm doing better at pulling in my knowledge from the previous days and better understanding what's going on.

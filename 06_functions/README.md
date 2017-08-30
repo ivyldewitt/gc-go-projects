@@ -4,7 +4,7 @@
 
 Functions or methods are reusable blocks of code that we have to perform certain specific actions.
 
-### Functions Overview
+## Functions Overview
 
 ***********************************************************************************
 
@@ -59,7 +59,7 @@ When we define a function we use parameters, when we pass in values those are ca
 
 Everything in Go is pass by value - what you see is what you get.
 
-### Variadic Parameters
+## Variadic Parameters
 
 ***********************************************************************************
 
@@ -99,7 +99,7 @@ func vary(x ...int) int {
 
 We call the ```...``` lexical elements. It's a lexical element operator.
 
-### Unfurling a Slice
+## Unfurling a Slice
 
 ***********************************************************************************
 
@@ -154,7 +154,7 @@ Not only is nothing there, but the underyling array did not get created.
 
 [Language Spec on Variadic Params](https://golang.org/ref/spec#Passing_arguments_to_..._parameters)
 
-### Defer
+## Defer
 
 ***********************************************************************************
 
@@ -191,7 +191,7 @@ func elixir() {
 
 Wherever the file exits, defer is always going to run whenever the containing function exits.
 
-### Methods
+## Methods
 
 ***********************************************************************************
 
@@ -269,7 +269,7 @@ func main() {
 
 [Go Playground](https://play.golang.org/p/WXKF8rOUx8)
 
-### Interfaces & Polymorphism
+## Interfaces & Polymorphism
 
 ***********************************************************************************
 
@@ -305,7 +305,7 @@ func (r *Request) Write(w io.Writer) error
 
 [func Request Ex](https://golang.org/pkg/net/http/#Request.Write)
 
-#### What does an interface say?
+### What does an interface say?
 
 If you have these methods, then you're my type.
 
@@ -402,7 +402,9 @@ func main() {
 
 [Go Playground](https://play.golang.org/p/eqXaa1R194)
 
-#### Review
+### Review
+
+***********************************************************************************
 
 Remember what interfaces do: they allow us to interface in a different way with types. A value can be of more than one type. An interface says, if you have this method speak, you're also of type human.
 
@@ -426,3 +428,105 @@ func Sprintf(format string, a ...interface{}) string
 [Fmt Package](https://golang.org/pkg/fmt/#Print)
 
 This provides a lot of flexibility and power in creating programing.
+
+## Anonymous Functions
+
+***********************************************************************************
+
+An anonymous (unnamed) self-executing functions.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    dog()
+
+    func() {
+        fmt.Println("Anon func ran!")
+    }()
+
+    func(x int) {
+        fmt.Println("Anon fun with int:" x)
+    }(7)
+}
+
+func dog(){
+    fmt.Println("Non anon func ran!")
+}
+
+```
+
+Note that with anon functions we immediately invoke it with the () after the function declaration.
+
+## Function Expressions
+
+***********************************************************************************
+
+Assiging the value of a function to a variable. 
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+   f := func(){
+       fmt.Println("My 1st function expression!")
+   }
+
+   f()
+
+   ob := func(x int){
+       fmt.Println("The book in Observer was: ", 1984, " by George Orwell")
+   }
+
+   ob(1984)
+}
+```
+
+In Go, functions are first-class citizens. This means that a function can be used just like any other variable. Aka a function is a type just like any other types.
+
+## Returning a Function
+
+***********************************************************************************
+
+How we can return a function from a function.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    s1 := observer()
+    fmt.Println(s1)
+
+    d := darkwood()
+
+    fmt.Println(d())
+}
+
+
+func observer() string {
+    ob := "Observer was an OK game"
+    return ob
+}
+
+
+func darkwood() func() int {
+    return func() int {
+        return 21
+    }
+}
+```
