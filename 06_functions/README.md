@@ -514,6 +514,7 @@ func main() {
 
     d := darkwood()
 
+    fmt.Printf("%T\n", d)  // func() int
     fmt.Println(d())
 }
 
@@ -530,3 +531,31 @@ func darkwood() func() int {
     }
 }
 ```
+
+[Playground Example](https://play.golang.org/p/uso7xtlsgz)
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+
+    fmt.Printf("%T\n", darkwood())  // func() int
+    fmt.Println(darkwood()())
+}
+func darkwood() func() int {
+    return func() int {
+        return 21
+    }
+}
+```
+
+[Playground Example](https://play.golang.org/p/WaYfdmo1cU)
+
+Why would we want to do this?
+
+Sometimes you'll return functions, for example we may need to return a function that returns a function and formats it in a specific way.
