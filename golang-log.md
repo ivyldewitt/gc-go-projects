@@ -421,3 +421,23 @@ I took a few days off of this project - for good reason though, I was learning J
 **Any Reflections?**:
 
 Still reviewing, but I think I'm working my way up, and luckily I'm doing better at pulling in my knowledge from the previous days and better understanding what's going on.
+
+## D20: Wednesday, August 30th, 2017
+
+**What did I learn today?**:
+
+Another deep dive into some of the more complex features of functions including closures, recursions, and callbacks.
+
+**How does this build on from yesterday?**:
+
+Completed the functions section, and built off of what I learned yesterday with anon functions and function expressions. I have a better understanding of how we can use functions and their various uses, though I will definitely take some time to review the callbacks section in particular to really solidify my understanding.
+
+**Key Takeways & Points to Review**:
+
+* Closures: Enclosing a variable inside a function in order to limit it's scope.
+* Recursion: Calling a function inside iself.
+* Callbacks: Calling a function inside a function - often used for functional programming.
+
+**Any Reflections?**:
+
+Learning a lot and tomorrow I'm onto to the exercises. We'll see how that goes.

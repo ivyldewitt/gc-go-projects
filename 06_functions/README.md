@@ -566,7 +566,7 @@ Sometimes you'll return functions, for example we may need to return a function 
 
 A a callback function is when we pass a function as a argument. A function can be returned to a func, assigned to variables, pass a function into another function as an argument.
 
-This is a type of programming called functional programming. We may use this to do and accomplish specific things. 
+This is a type of programming called functional programming. We may use this to do and accomplish specific things.
 
 ```go
 
@@ -633,3 +633,244 @@ func even(f func(xi ...int) int, iv ...int) int {
 }
 
 ```
+
+Odd callback function:
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    ii := []int{1, 2, 3, 4, 5, 6, 7,8, 9}
+    q := sum(ii...)
+    fmt.Println(q)
+
+    v := odd(sum, ii...)
+    fmt.Println(v)
+}
+
+func sum(xi ...int) int {
+    fmt.Printf("%T\n", xi)
+    total := 0
+    for _, val := range xi {
+        total += val
+    }
+    return total
+}
+
+// Callback  func(xi ...int) int
+
+func odd(f func(xi ...int) int, iv ...int) int {
+    var vy []int
+    for _, v := range iv {
+        if v%2 != 0 {
+            vy = append(vy, v)
+        }
+    }
+    return f(vy...)
+}
+```
+
+[Go Playground](https://play.golang.org/p/_ugdD3pYjT)
+
+## Closure
+
+***********************************************************************************
+
+Closure is a concept of enclosing a scope of a variable around the variable so that the scope of that variable is limited - so that variable's scope is smaller part of the overall memory access.
+
+Jedi level is to narrow scope as much as possible.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+var ix int
+
+func main() {
+    fmt.Println(ix)
+    ix++
+    fmt.Println(ix)
+    darkwood() //also increments ix
+    fmt.Println(ix)
+
+}
+
+func darkwood() {
+    fmt.Println("Darwood rules!")
+    ix++
+}
+
+```
+
+Scope of x when it's narrowed down to a func main:
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+
+func main() {
+    var ix int
+    fmt.Println(ix)
+    ix++
+    fmt.Println(ix)
+    darkwood() //also increments ix
+    fmt.Println(ix)
+
+}
+
+func darkwood() {
+    fmt.Println("Darwood rules!")
+    ix++ //will cause an error if we run it! ix is now only in func main
+}
+
+```
+
+Code block inside of another code block with iy:
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+
+func main() {
+    var ix int
+    fmt.Println(ix)
+    ix++
+    {
+        iy := 21
+
+        fmt.Println(iy)
+    }
+
+    fmt.Println(iy) //This will also cause an error!!!
+    fmt.Println(ix)
+    darkwood() //also increments ix
+    fmt.Println(ix)
+
+}
+
+func darkwood() {
+    fmt.Println("Darwood rules!")
+    ix++ //will cause an error if we run it! ix is now only in func main
+}
+
+```
+
+Using closure - keeping our scope as narrow as possible and limiting the scope of oy.
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+
+func main() {
+    v := incrementor()
+    fmt.Println(v())
+    w := incrementor()
+    fmt.Println(v())
+    fmt.Println(v())
+    fmt.Println(v())
+    fmt.Println("------------")
+    fmt.Println(w())
+    fmt.Println(w())
+    fmt.Println(w())
+
+}
+
+func incrementor() func() int {
+    var ix int
+    return func() int {
+        ix++
+        return ix
+    }
+}
+
+```
+
+Returning a function that is encloused around that ix. Both w and v are returning different scopes - they have different locations in memory. This is a nice way to use closure in order to limit our scope - and in this case we use it to create two separate variables that are stored in memory and increment those variables.
+
+[Go Playground](https://play.golang.org/p/CK3_UpF5iU)
+
+## Recursion
+
+***********************************************************************************
+
+Recursion is a function that calls itself. Anything we do with recursion we can do with loops - recursion is nice, but it can be unnecessarily complex and also cause us to use unnecessary amounts of memory.
+
+Recursion is effectively when a function calls itself. We looked at closure when we're enclosing a variables scope in a function, callbacks when we have a function calling another functions, and recursion.
+
+Classic example is a factorial.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    n := factorial(7)
+    fmt.Println(n)
+}
+
+func factorial(n int) int {
+    if n == 0 {
+        return 1
+    }
+    return n * factorial(n-1)
+}
+
+// 7 * 6 (7-1) * 5 (6-1) * 4 (5-1) * 3 (4-1) * 2 (3-1) * 1 (2-1) * 0 (defaults to 1)
+
+```
+
+[Go Playground - Factorial](https://play.golang.org/p/hgceXL4f2b)
+
+The function 'unwinds' similiar to the following: ```7 * 6 (7-1) * 5 (6-1) * 4 (5-1) * 3 (4-1) * 2 (3-1) * 1 (2-1) * 0 (defaults to ```.
+
+Once it's unwound, then we exit the function and return the value.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    n := factorial(7)
+    fmt.Println(n)
+}
+
+func factorial(n int) int {
+
+    total := 1
+    for v := n; v > 0; v-- {
+        total *= v
+    }
+    return total
+}
+
+```
+
+[Factorial with Loop](https://play.golang.org/p/6FBJmet6M_)
