@@ -559,3 +559,77 @@ func darkwood() func() int {
 Why would we want to do this?
 
 Sometimes you'll return functions, for example we may need to return a function that returns a function and formats it in a specific way.
+
+## Callback
+
+***********************************************************************************
+
+A a callback function is when we pass a function as a argument. A function can be returned to a func, assigned to variables, pass a function into another function as an argument.
+
+This is a type of programming called functional programming. We may use this to do and accomplish specific things. 
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    ii := []int{3, 45, 53, 1, 22, 5, 7, 9}
+    q := sum(ii...)
+    fmt.Println(q)
+}
+
+func sum(xi ...int) int {
+    fmt.Printf("%T\n", xi)
+    total := 0
+    for _, val := range xi {
+        total += val
+    }
+    return total
+}
+
+```
+
+Adding an even function.
+
+```go
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    ii := []int{3, 45, 53, 1, 22, 5, 7, 9}
+    q := sum(ii...)
+    fmt.Println(q)
+
+    v := even(su, ii...)
+    fmt.Println(v)
+}
+
+func sum(xi ...int) int {
+    fmt.Printf("%T\n", xi)
+    total := 0
+    for _, val := range xi {
+        total += val
+    }
+    return total
+}
+// Callback  func(xi ...int) int
+
+func even(f func(xi ...int) int, iv ...int) int {
+    var vy []int
+    for _, v := range iv {
+        if v % 2 == 0 {
+            vy = append(vy, v)
+        }
+    }
+    return f(vy...)
+}
+
+```
