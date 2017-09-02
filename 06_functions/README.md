@@ -191,6 +191,8 @@ func elixir() {
 
 Wherever the file exits, defer is always going to run whenever the containing function exits.
 
+Interesting note - defer appears to go from top to bottom. Reveiw file: /Users/ivydewitt/go/src/github.com/zentechnista/gc-go-projects/06_functions/ninja_exercises/03_defer/main.go for reference - if I create 3 functions, the 'top' defer function is the last one to go.
+
 ## Methods
 
 ***********************************************************************************
