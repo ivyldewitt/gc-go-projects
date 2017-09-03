@@ -558,7 +558,7 @@ func darkwood() func() int {
 
 [Playground Example](https://play.golang.org/p/WaYfdmo1cU)
 
-Why would we want to do this?
+### Why would we want to do this?
 
 Sometimes you'll return functions, for example we may need to return a function that returns a function and formats it in a specific way.
 
@@ -610,7 +610,7 @@ func main() {
     q := sum(ii...)
     fmt.Println(q)
 
-    v := even(su, ii...)
+    v := even(sum, ii...)
     fmt.Println(v)
 }
 
@@ -677,6 +677,10 @@ func odd(f func(xi ...int) int, iv ...int) int {
 ```
 
 [Go Playground](https://play.golang.org/p/_ugdD3pYjT)
+
+Callback Functions from [Stack Overflow](https://stackoverflow.com/questions/824234/what-is-a-callback-function).
+
+Examples on callback functions: [Go Playground](https://play.golang.org/p/WeDhi1HXkD).
 
 ## Closure
 
