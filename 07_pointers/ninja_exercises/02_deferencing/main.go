@@ -35,8 +35,7 @@ func main() {
 }
 
 func changeMe(p *person) {
-	(*p).first = "Ororo" // or we can use p.first
+	(*p).first = "Ororo" //Can also use p.first
 	(*p).last = "Munroe"
 	(*p).age = 27
-
 }
